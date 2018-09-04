@@ -1,0 +1,110 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+@import "../libs/uikit/src/scss/uikit-theme.scss";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.icon {
+	height: 15px;
+	margin-right: 7px;
+}
+
+header, .uk-navbar-nav>li>a {
+	font-size: 15px;
+	font-family: Arial;
+	text-transform: none;
+	color: #4e4e4e;
+}
+.logo img {
+	margin: 12px 0px 12px -22px;
+}
+button {
+	background-color: $accentcolor;
+	font-size: 15px;
+	font-family: Arial;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 3px #d0ad24;
+	padding: 9px 0;
+	height: 32px;
+	width: 160px;
+}
+a {
+	color: #474330;
+	text-decoration: none;
+	cursor: pointer;
+}
+ .uk-container {
+	 padding: 0px;
+	 margin: 0px 43px;
+ }
+.header_top {
+	height: 70px;
+}
+.header_top_a {
+	margin-top: 18px;
+}
+.icon_top {
+
+}
+.svg {
+	 filter: invert(0.5) sepia(1) saturate(64) hue-rotate(223deg) brightness(0.78);
+}
+hr {
+	margin-top: 0px;
+}
+
+.uk-navbar-nav>li>a {
+	width: auto;
+	height: 70px;
+	padding: 20px;
+
+}
+
+// @import "media"; // Always at the end
