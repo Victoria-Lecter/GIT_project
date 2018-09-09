@@ -32,6 +32,12 @@ body {
 		}
 	}
 }
+h3 {
+	font-size: 18px;
+}
+h2 {
+	text-transform: uppercase;
+}
 
 .img-responsive {
 	display: block;
@@ -67,8 +73,9 @@ header {
 .logo img {
 	margin: 12px 0px 12px -22px;
 }
-button {
-	background-color: $accentcolor;
+.button {
+	background-color: $accent;
+	color: #303030;
 	font-size: 15px;
 	font-family: Arial;
 	border: none;
@@ -77,18 +84,14 @@ button {
 	padding: 9px 0;
 	margin-left: 20px;
 	height: 32px;
-	width: 160px;
+	width: 166px;
 }
 a {
 	color: #474330;
 	text-decoration: none;
-	cursor: pointer;
-}
- .uk-container {
-	 padding: 0px;
-	 margin: 0px 43px;
 
- }
+}
+
 .header_top {
 	height: 70px;
 }
@@ -163,34 +166,26 @@ aside {
 		position: absolute;
 		bottom: 100px;
 		left: 62px;
-			p {
-				font-size: 18px;
-				color: white;
-				line-height: 1.25;
-				letter-spacing: 1px;
-				width: 330px;
-			}
+		p {
+			font-size: 18px;
+			color: white;
+			line-height: 1.25;
+			letter-spacing: 1px;
+			width: 330px;
+		}
 	}
-
-
 }
 
 .main_offer {
 	background-color: #f6f5f3;
-
+  margin-top: -40px;
+	padding-bottom: 100px;
 }
 
 .uk-card {
 	background-color: white;
+}
 
-
-}
-.first_cell {
-background-color: initial;
-}
-.main_offer {
-	margin-top: -40px;
-}
 h3.uk-card-title {
 	text-transform: uppercase;
 	font-size: 18px;
@@ -204,12 +199,14 @@ h3.uk-card-title {
 .first_cell {
 	height: 300px;
 	padding-top: 15px;
+	background-color: initial;
 	h2 {
+		text-transform: uppercase;
 		color: white;
 		line-height: 1.125;
 	}
 	span {
-		color: #476ac6;
+		color: $accent2;
 		font-size: 30px;
 		font-weight: bold;
 	}
@@ -220,6 +217,7 @@ h3.uk-card-title {
 	}
 }
 .offer_cell {
+
 	height: 300px;
 	padding: 0px;
 	position: relative;
@@ -228,7 +226,8 @@ h3.uk-card-title {
 	}
 	p {
 		color: black;
-		padding-left: 20px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 	.offer_icon {
 		height: 13px;
@@ -240,12 +239,12 @@ h3.uk-card-title {
 		margin-left: 10px;
 	}
 	.offer_icon2 {
-		margin-right: 20px;
-		margin-top: 0px;
+		margin-right: 30px;
+		margin-top: -40px;
 	}
 }
-.offer_button1, .offer_button2, .offer_button3, .offer_button4, .offer_button5 {
-	width: 334px;
+.offer_button {
+	width: 90%;
 	height: 51px;
 	margin: auto;
 	border-radius: 0px;
@@ -253,11 +252,13 @@ h3.uk-card-title {
 	box-shadow: none;
 	font-weight: bold;
 	position: absolute;
-	bottom: 20px;
+	bottom: 21px;
+	left: 21px;
 
 }
 .offer_button1 {
 	border: 2px solid #6e839e;
+	color: #6e839e;
 	.svg {
 		path {
 			fill: #6e839e;
@@ -266,6 +267,7 @@ h3.uk-card-title {
 }
 .offer_button2 {
 	border: 2px solid #00a276;
+	color: #00a276;
 	.svg {
 		path {
 			fill: #00a276;
@@ -274,6 +276,7 @@ h3.uk-card-title {
 }
 .offer_button3 {
 	border: 2px solid #ff4e0a;
+	color: #ff4e0a;
 	.svg {
 		path {
 			fill: #ff4e0a;
@@ -282,6 +285,7 @@ h3.uk-card-title {
 }
 .offer_button4 {
 	border: 2px solid #5f536b;
+	color: #5f536b;
 	.svg {
 		path {
 			fill: #5f536b;
@@ -290,11 +294,201 @@ h3.uk-card-title {
 }
 .offer_button5 {
 	border: 2px solid #aa6458;
+	color: #aa6458;
 	.svg {
 		path {
 			fill: #aa6458;
 		}
 	}
 }
+.offer_cell3 {
+	p {
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-right: 180px;
+	}
+	h3 {
+		padding-right: 80px;
+	}
+}
+.offer_cell4 {
+	.offer_icon3 {
+		margin-right: 40px;
+		margin-left: 40px;
+		margin-top: -10px;
+	}
+}
+.offer_cell5 {
+	.offer_icon4 {
+		margin-right: 20px;
+		padding-left: 50px;
+	}
+	p {
+		padding-top: 10px;
+	}
+}
+.offer_cell6 {
+	.offer_icon5 {
+		margin-right: 20px;
+	}
+}
 
+.clear{
+	clear: both;
+}
+
+.main_plan {
+		margin-top: -72px;
+		padding-bottom: 164px;
+	h2 {
+		text-transform: uppercase;
+		width: 280px;
+		font-size: 24px;
+		margin-bottom: 100px;
+		span {
+			font-size: 30px;
+			color: $accent;
+			font-weight: bold;
+		}
+	}
+}
+
+.plan_block {
+
+	h3 {
+	  text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 1.5px;
+	}
+	p {
+		color: #747474;
+	}
+}
+.plan_left {
+	width: 50%;
+	float: left;
+	text-align: right;
+	margin-top: -40px;
+	p {
+		padding-left: 215px;
+		padding-right: 60px;
+	}
+	h3 {
+		padding-right: 60px;
+	}
+}
+.plan_right {
+	width: 50%;
+	float: right;
+	text-align: left;
+	margin-top: -40px;
+	p {
+		padding-left: 60px;
+		padding-right: 215px;
+	}
+	h3 {
+		padding-left: 60px;
+	}
+}
+.plan_circle {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 33px;
+	width: 33px;
+	vertical-align: middle;
+	background-color: $accent;
+	border-radius: 50%;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -5px;
+	font-size: 15px;
+	line-height: 33px;
+	box-shadow: 0px 10px white, 0px -10px white;
+}
+.vl {
+	border-left: 2px solid $accent;
+	height: 1000px;
+	position: absolute;
+	left: 50%;
+	margin-top: 110px;
+}
+.plan_circle::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 10px solid $accent;
+	border-bottom: 8px solid transparent;
+	margin-top: -24px;
+	margin-left: -7px;
+}
+
+.plan_right .plan_circle::after {
+	margin-left: 30px;
+	transform: rotate(180deg);
+}
+.main_plan .button {
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+	margin-top: 20px;
+}
+.mediateka {
+	background-color: #f6f5f3;
+	padding-bottom: 110px;
+	h2 {
+		margin-top: -30px;
+		text-transform: uppercase;
+		width: 280px;
+		font-size: 24px;
+		width: 205px;
+	}
+	span {
+		font-size: 30px;
+		color: $accent2;
+		font-weight: bold;
+	}
+}
+.media_button {
+	width: 122px;
+	height: 41px;
+	border: none;
+	background-color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+.media_button:hover {
+	text-decoration: none;
+}
+ .media_image {
+    height: 277px;
+ }
+.media_wrap{
+	position: relative;
+	overflow: hidden;
+	color: inherit;
+	display: block;
+	span{
+		position: absolute;
+		display: inline-block;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+		font-size: 16px;
+		color: white;
+	}
+}
+.question {
+	background-image: url(/img/contact_bg_hor.png), url(/img/contact_bg_ver.png), url(/img/contact_bg_hor.png), url(/img/contact_bg_ver.png);
+	background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+	background-position: top left, top left, bottom left, bottom right;
+	height: 500px;
+	h2 {
+		font-size: 32px;
+		text-align: center;
+	}
+}
 // @import "media"; // Always at the end
