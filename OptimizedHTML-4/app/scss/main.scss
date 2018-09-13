@@ -62,6 +62,11 @@ b, strong {
 }
 header {
 	margin-bottom: 18px;
+	.svg {
+		path {
+			fill: $accent2;
+		}
+	}
 }
 
 .header_top, .uk-navbar-nav>li>a {
@@ -71,7 +76,8 @@ header {
 	color: #4e4e4e;
 }
 .logo img {
-	margin: 12px 0px 12px -22px;
+	margin: 20px 20px 20px 0px;
+
 }
 .button {
 	background-color: $accent;
@@ -85,6 +91,7 @@ header {
 	margin-left: 20px;
 	height: 32px;
 	width: 166px;
+	cursor: pointer;
 }
 a {
 	color: #474330;
@@ -116,10 +123,6 @@ aside {
 	padding-top: 18px;
 	padding-bottom: 18px;
 	background-color: #f6f5f3;
-}
-.uk-nav>li>a {
-	padding: 0px;
-	margin: 18px 0 25px 20px;
 }
 
 .main_header{
@@ -308,7 +311,7 @@ h3.uk-card-title {
 	padding-right: 180px;
 	}
 	h3 {
-		padding-right: 80px;
+		padding-right: 90px;
 	}
 }
 .offer_cell4 {
@@ -412,7 +415,7 @@ h3.uk-card-title {
 	height: 1000px;
 	position: absolute;
 	left: 50%;
-	margin-top: 110px;
+	margin-top: 115px;
 }
 .plan_circle::after {
 	content: "";
@@ -459,18 +462,19 @@ h3.uk-card-title {
 	background-color: white;
 	font-size: 14px;
 	font-weight: bold;
+	cursor: pointer;
 }
 .media_button:hover {
-	text-decoration: none;
+	color: $accent2;
 }
  .media_image {
     height: 277px;
+		object-fit: cover;
  }
 .media_wrap{
 	position: relative;
-	overflow: hidden;
-	color: inherit;
 	display: block;
+
 	span{
 		position: absolute;
 		display: inline-block;
@@ -485,10 +489,106 @@ h3.uk-card-title {
 	background-image: url(/img/contact_bg_hor.png), url(/img/contact_bg_ver.png), url(/img/contact_bg_hor.png), url(/img/contact_bg_ver.png);
 	background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
 	background-position: top left, top left, bottom left, bottom right;
-	height: 500px;
+	height: 615px;
 	h2 {
-		font-size: 32px;
+		font-size: 30px;
 		text-align: center;
+		margin-top: 76px;
+		margin-bottom: 0;
+	}
+	.p {
+		font-size: 24px;
+		margin-bottom: 30px;
+		margin-top: 50px;
+	}
+	p {
+		margin-top: 0;
+		margin-bottom: 36px;
+		color: #363636;
+	}
+	.button {
+		margin: auto;
+		width: 277px;
+		height: 51px;
+		font-size: 24px;
+	}
+	span {
+		font-size: 24px;
+	}
+	input {
+		border-color: #cccccc;
+		height: 32px;
+		width: 277px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		font-size: 15px;
+	}
+	a {
+		color: #5f87c5;
+		text-decoration: underline;
+	}
+	.question_left {
+		margin-left: 210px;
+		margin-top: 80px;
+		padding-right: 30px;
+	}
+	.question_right {
+		margin-right: 250px;
+		margin-top: 90px;
+		margin-left: 20px;
 	}
 }
+.map {
+	background-color: #e4eeff;
+	iframe {
+		width: 100%;
+	}
+}
+footer {
+	margin-top: 68px;
+	margin-bottom: 10px;
+	ul {
+		font-size: 15px;
+		color: #656565;
+		li {
+			line-height: 0.8;
+		}
+	}
+
+	.uk-nav>li>a {
+		margin-top: 9px;
+		margin-bottom: 9px;
+	}
+	.footer_h {
+		font-weight: bold;
+		font-size: 15px;
+		margin-bottom: 25px;
+		color: #212121;
+	}
+	.footer-two {
+		margin-left: 100px;
+		margin-right: -70px;
+	}
+	.footer-three {
+		margin-left: 170px;
+		margin-right: -10px;
+	}
+	.footer-four {
+		margin-left: 150px;
+		margin-right: -10px;
+	}
+	hr {
+		margin-top: 61px;
+	}
+}
+.foot-bottom {
+	color: #7f7f7f;
+	letter-spacing: 1px;
+	.foot-icon {
+		margin-left: 18px;
+	}
+}
+
+
+
 // @import "media"; // Always at the end
