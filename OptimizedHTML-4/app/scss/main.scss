@@ -14,7 +14,6 @@
 }
 
 body {
-	font-family: Arial;
 	font-size: 14px;
 	min-width: 320px;
 	position: relative;
@@ -68,6 +67,10 @@ header {
 		}
 	}
 }
+header .uk-navbar-nav li a:hover {
+	color: $accent2;
+	text-decoration: underline;
+}
 
 .header_top, .uk-navbar-nav>li>a {
 	font-size: 15px;
@@ -117,12 +120,6 @@ hr {
 	width: auto;
 	height: 70px;
 	padding: 20px;
-
-}
-aside {
-	padding-top: 18px;
-	padding-bottom: 18px;
-	background-color: #f6f5f3;
 }
 
 .main_header{
@@ -257,7 +254,7 @@ h3.uk-card-title {
 	position: absolute;
 	bottom: 21px;
 	left: 21px;
-
+	cursor: pointer;
 }
 .offer_button1 {
 	border: 2px solid #6e839e;
@@ -588,7 +585,119 @@ footer {
 		margin-left: 18px;
 	}
 }
+//STUDENT
+.student-main {
+	background-color: #f6f5f3;
+	height: 1000px;
+}
+.student-left {
+	float: left;
+	width: 193px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: -40px;
+	padding-left: 40px;
 
+	li {
+		line-height: 41px;
+		a {
+			padding: 0;
+		}
+	}
+
+}
+.student-right {
+	float: right;
+	width: 304px;
+	height: 225px;
+	.student-right-block-2 {
+		margin-left: 20px;
+		margin-top: 20px;
+		p {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			padding-right: 20px;
+		}
+	}
+	a {
+		color: #0054b9;
+	}
+	p span {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.student-right-block-1 {
+		position: relative;
+		height: 92px;
+		width: 305px;
+		background-color: white;
+		margin-top: 20px;
+		p {
+			margin-bottom: 0;
+			margin-top: 0;
+			color: #888888;
+		}
+		.avatar {
+			float: left;
+			margin: 20px;
+			border-radius: 50%;
+			width: 50px;
+			object-fit: none;
+
+		}
+		.avatar-wrap {
+			position: absolute;
+			left: 92px;
+			bottom: 25px;
+		}
+	}
+}
+.student-middle-1, .student-middle-2 {
+	background-color: white;
+	width: 660px;
+	height: 122px;
+	margin-right: 20px;
+	margin-left: 18%;
+	margin-top: 20px;
+	font-size: 15px;
+	line-height: 0.75;
+	.st-mdl-r {
+		float: right;
+		width: 80%;
+		margin: 25px 0px;
+	}
+	.st-mdl-l {
+		float: left;
+		width: 15%;
+		margin: 25px 0px 25px 25px;
+		color: #888888;
+	}
+}
+.student-middle-2 {
+	height: 200px;
+	width: 610px;
+	padding: 25px;
+	p {
+		line-height: normal;
+		margin-bottom: 35px;
+	}
+	.st-mdl-parag {
+		margin-top: -18px;
+		margin-bottom: -5px;
+		margin-right: 110px;
+		line-height: 1.25;
+	}
+	.inactive {
+		font-weight: bold;
+		color: #cccccc;
+	}
+}
+.student-middle-2 .st-circle::before {
+	content: "";
+	background-color: green;
+	width: 14px;
+	border-radius: 50%;
+}
 
 
 // @import "media"; // Always at the end
