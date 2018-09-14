@@ -78,7 +78,7 @@ header .uk-navbar-nav li a:hover {
 	text-transform: none;
 	color: #4e4e4e;
 }
-.logo img {
+.logo-header img {
 	margin: 20px 20px 20px 0px;
 
 }
@@ -542,6 +542,7 @@ h3.uk-card-title {
 	}
 }
 footer {
+	height: auto;
 	margin-top: 68px;
 	margin-bottom: 10px;
 	ul {
@@ -588,7 +589,7 @@ footer {
 //STUDENT
 .student-main {
 	background-color: #f6f5f3;
-	height: 1000px;
+	height: 884px;
 }
 .student-left {
 	float: left;
@@ -597,19 +598,57 @@ footer {
 	margin-bottom: 20px;
 	margin-left: -40px;
 	padding-left: 40px;
+	.blog {
 
+		a {
+			font-size: 14px;
+			color: #476ac6;
+			letter-spacing: normal;
+		}
+		p {
+			font-size: 12px;
+			color: #888888;
+			letter-spacing: 0.5px;
+		}
+		.marked-blog {
+			color: #6da2e1;
+		}
+		p:nth-child(odd) {
+			margin-top: 0;
+		}
+		p:nth-child(even) {
+			margin-bottom: 0;
+		}
+		p:first-child {
+			color: #303030;
+			font-size: 11px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-top: 45px;
+			margin-bottom: 20px;
+		}
+	}
 	li {
 		line-height: 41px;
 		a {
 			padding: 0;
+			margin-left: -40px;
+			padding-left: 40px;
+			color: #7f7f7f;
+		}
+		.active {
+			background-color: white;
+			color: #3e3e3e;
+		}
+		a:hover {
+			color: #476ac6;
 		}
 	}
-
 }
 .student-right {
 	float: right;
 	width: 304px;
-	height: 225px;
 	.student-right-block-2 {
 		margin-left: 20px;
 		margin-top: 20px;
@@ -628,10 +667,14 @@ footer {
 	}
 	.student-right-block-1 {
 		position: relative;
-		height: 92px;
+		height: auto;
 		width: 305px;
 		background-color: white;
 		margin-top: 20px;
+		ol li {
+			height: 40px;
+			margin-bottom: 9px;
+		}
 		p {
 			margin-bottom: 0;
 			margin-top: 0;
@@ -655,12 +698,15 @@ footer {
 .student-middle-1, .student-middle-2 {
 	background-color: white;
 	width: 660px;
-	height: 122px;
+	height: auto;
 	margin-right: 20px;
 	margin-left: 18%;
 	margin-top: 20px;
 	font-size: 15px;
 	line-height: 0.75;
+	hr {
+		margin-top: 20px;
+	}
 	.st-mdl-r {
 		float: right;
 		width: 80%;
@@ -672,6 +718,38 @@ footer {
 		margin: 25px 0px 25px 25px;
 		color: #888888;
 	}
+	form {
+		text-align: right;
+		font-size: 14px;
+		color: #656565;
+		margin-right: 96px;
+		input:nth-child(6), input:nth-child(5) {
+			width: 128px;
+		}
+		input {
+			height: 30px;
+			width: 258px;
+			margin-top: 15px;
+			margin-left: 22px;
+			border-color: #cccccc;
+		}
+	}
+}
+.radio-gender input[type="radio"] {
+    display:none;
+}
+.radio-gender label {
+	display: inline-block;
+	width: 128px;
+	height: 30px;
+  border: 1px solid #cccccc;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: -10px;
+}
+.radio-gender input[type="radio"]:checked + label {
+    border-color: #6c88d1;
+		background-color: #d3dbf1;
 }
 .student-middle-2 {
 	height: 200px;
