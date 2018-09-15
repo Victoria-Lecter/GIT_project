@@ -118,24 +118,56 @@
           кратчайшие сроки.</p>
         </div>
   	  </aside>
-      <section class="student-middle-1">
-				<form action="">
-					<label>Имя: <input type="text" name="first-name"></label><br>
-					<label>Фамилия: <input type="text" name="last-name" id></label><br>
-					<p style="float: left;">Пол:</p> <div class="radio-gender"><input type="radio" name="gender" value="male" id="male-radio">
-					<label for="male-radio">Мужской</label>
-					<input type="radio" name="gender" value="female" id="female-radio">
-					<label for="female-radio">Женский</label></div><br>
-					<label>Дата рождения: <input type="date" name="birthday"></label><br>
-					<label>Семейное положение: <input type="text"></label><br>
-					<label>Страна рождения: <input type="text"></label><br>
-					<label>Город рождения: <input type="text"></label><br>
-					<label>Гражданство при рождении: <input type="text"></label><br>
-					<label>Современное гражданство: <input type="text"></label><br>
-				</form>
-				<hr>
-				<button type="submit" name="save">Сохранить</button>
-      </section>
+      <div class="student-middle-1">
+				<div class="form_wrap">
+					<form action="">
+						<div class="input_item_wrap">
+							<label class="prefix_input" for="">Фамилия:</label>
+							<div class="input_item">
+								<input type="text" placeholder="Surname">
+							</div>
+						</div>
+						<div class="input_item_wrap">
+							<label class="prefix_input" for="">Фамилия:</label>
+							<div class="input_item">
+								<select name="" id="">
+									<option value="">sdgffd</option>
+								</select>
+							</div>
+						</div>
+						<div class="input_item_wrap">
+							<label class="prefix_input" for="">Пол:</label>
+							<div class="input_item flex">
+								<input id="male" name="gender" type="radio">
+								<label for="male" for="">male</label>
+								<input id="female" name="gender" type="radio">
+								<label for="female" for="">female</label>
+							</div>
+						</div>
+						<div class="input_item_wrap">
+							<label class="prefix_input" for="">Фамилия:</label>
+							<div class="input_item">
+								<select name="" id="">
+									<option value="">sdgffd</option>
+								</select>
+							</div>
+						</div>
+						<div class="input_item_wrap">
+							<label class="prefix_input" for="">Фамилия:</label>
+							<div class="input_item flex date">
+								<input type="text">
+								<select name="" id="">
+									<option value="">sdgffd</option>
+								</select>
+								<input type="text">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="form-bottom">
+					<button class="btn_transparent" type="submit" name="save">Сохранить</button>
+				</div>
+      </div>
     </div>
   </main>
 
