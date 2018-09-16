@@ -9,7 +9,7 @@
 }
 
 ::selection {
-	background-color: $accent;
+	background-color: $accent2;
 	color: #fff;
 }
 
@@ -65,8 +65,8 @@ b, strong {
 	height: 15px;
 	margin-right: 7px;
 }
+
 header {
-	margin-bottom: 18px;
 	.svg {
 		path {
 			fill: $accent2;
@@ -75,7 +75,6 @@ header {
 }
 header .uk-navbar-nav li a:hover {
 	color: $accent2;
-	text-decoration: underline;
 }
 
 .header_top, .uk-navbar-nav>li>a {
@@ -83,6 +82,10 @@ header .uk-navbar-nav li a:hover {
 	font-family: Arial;
 	text-transform: none;
 	color: #4e4e4e;
+}
+.header_bottom {
+	padding: 15px 0;
+	border-top: 1px solid #e5e5e5;
 }
 .logo-header img {
 	margin: 20px 20px 20px 0px;
@@ -102,10 +105,9 @@ header .uk-navbar-nav li a:hover {
 	width: 166px;
 	cursor: pointer;
 }
-a {
+header a {
 	color: #474330;
 	text-decoration: none;
-
 }
 
 .header_top {
@@ -117,7 +119,6 @@ a {
 .icon_top {
 margin: 10px;
 }
-
 hr {
 	margin-top: 0px;
 }
@@ -597,6 +598,7 @@ footer {
 	background-color: #f6f5f3;
 	height: 884px;
 }
+
 .student-left {
 	float: left;
 	width: 193px;
@@ -604,6 +606,9 @@ footer {
 	margin-bottom: 20px;
 	margin-left: -40px;
 	padding-left: 40px;
+	a:hover {
+		color: $accent2;
+	}
 	.blog {
 
 		a {
@@ -643,15 +648,37 @@ footer {
 			padding-left: 40px;
 			color: #7f7f7f;
 		}
-		.active {
-			background-color: white;
-			color: #3e3e3e;
-		}
-		a:hover {
-			color: #476ac6;
+
+	}
+}
+
+
+
+
+.menu_right_sidebar{
+	margin-top: 20px;
+	ul{
+		padding-left: 0;
+		li {
+		 position: relative;
+		 height: auto;
+		 width: 260px;
+		 background-color: white;
+		 padding: 10px 23px;
+		 margin-bottom: 9px;
+		 font-weight: bold;
+		 list-style-type: none;
+		 a {
+			 color: #888888;
+			 &:hover {
+				 text-decoration: none;
+				 color: $accent2;
+			 }
+		 }
 		}
 	}
 }
+
 .student-right {
 	float: right;
 	width: 304px;
@@ -674,12 +701,20 @@ footer {
 	.student-right-block-1 {
 		position: relative;
 		height: auto;
-		width: 305px;
+		width: 260px;
 		background-color: white;
-		margin-top: 20px;
-		ol li {
-			height: 40px;
-			margin-bottom: 9px;
+		padding: 10px 23px;
+		margin-bottom: 9px;
+		font-weight: bold;
+		&:first-child {
+			margin-top: 20px;
+		}
+		a {
+			color: #888888;
+			&:hover {
+				text-decoration: none;
+				color: $accent2;
+			}
 		}
 		p {
 			margin-bottom: 0;
@@ -701,6 +736,10 @@ footer {
 		}
 	}
 }
+.bold18 {
+	font-size: 18px;
+	font-weight: bold;
+}
 .student-middle-1, .student-middle-2 {
 	background-color: white;
 	width: 660px;
@@ -710,6 +749,22 @@ footer {
 	margin-top: 20px;
 	font-size: 15px;
 	line-height: 0.75;
+	.h2-wrap {
+		text-align: left;
+		width: 50%;
+		margin-left: 40%;
+		padding-left: 28px;
+		h2 {
+			display: inline-block;
+			margin-left: 0;
+			margin-top: 0;
+			margin-right: 33px;
+			margin-bottom: 5px;
+			padding-top: 30px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+	}
 	hr {
 		margin-top: 20px;
 	}
@@ -767,6 +822,9 @@ footer {
 	display: inline-block;
 }
 
+
+
+
 .flex{
 	display: inline-flex!important;
 	justify-content: center;
@@ -780,10 +838,12 @@ footer {
 .input_item{
 	display: inline-block;
 	width: 50%;
+
 	&.flex{
 		width: 262px;
 	}
 	&.date{
+		margin-bottom: 15px;
 		input{
 			width: 35px;
 			&:first-child{
@@ -801,6 +861,7 @@ footer {
 		padding: 0 15px;
 		display: block;
 		background: #fff;
+		font-size: 15px;
 	}
 	select{
 		width: 262px;
@@ -830,14 +891,12 @@ footer {
 .btn_transparent{
 	background-color: transparent;
 	border: 1px solid #ccc;
-	color: $accent2;
+	color: #6c88d1;
 	font-weight: bold;
 	font-size: 14px;
 	padding: 5px 20px;
 	letter-spacing: .5;
 }
-
-
 .form-bottom{
 	padding-left: 40%;
 	padding-top: 20px;
@@ -846,29 +905,6 @@ footer {
 	button{
 		margin-left: 28px;
 	}
-}
-
-.radio-gender input[type="radio"] {
-    display:none;
-
-}
-.radio-gender label {
-	display: inline-block;
-	width: 128px;
-	height: 30px;
-  border: 1px solid #cccccc;
-	text-align: center;
-	margin-top: 15px;
-	margin-bottom: -10px;
-	font-size: 14px;
-	background-color: white;
-}
-.radio-gender input[type="radio"]:checked + label {
-    border-color: #6c88d1;
-		background-color: #d3dbf1;
-}
-input[type="radio"]:nth-child(1) {
-	border-right: none;
 }
 .student-middle-2 {
 	height: 200px;
@@ -895,6 +931,53 @@ input[type="radio"]:nth-child(1) {
 	width: 14px;
 	border-radius: 50%;
 }
-
+ul li a.active {
+	background-color: white;
+	color: #303030;
+}
+.authorization {
+	width: auto;
+	height: auto;
+	.uk-dropdown {
+		padding: 10px 0;
+	}
+	ul li {
+		padding-bottom: 8px;
+		padding-left: 20px;
+		font-size: 15px;
+		&.uk-active {
+			background-color: #f6f5f3;
+			a {
+				color: #303030;
+			}
+		}
+		a {
+			color: #303030;
+			&:hover {
+				color: #808080;
+			}
+		}
+	}
+}
+.user-button {
+	padding: 0;
+	background-color: white;
+	margin: 0;
+	line-height: 21px;
+	span {
+		padding-left: 10px;
+	}
+}
+[class*=uk-align] {
+	margin-bottom: 0;
+}
+.icon-drop-menu {
+	padding-right: 10px;
+}
+.payment {
+	.input_item {
+		margin-bottom: 20px;
+	}
+}
 
 // @import "media"; // Always at the end

@@ -37,7 +37,8 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		// 'app/libs/uikit/src/js/uikit-core.js',
+		'app/libs/uikit/dist/js/uikit.js',
+		'app/libs/uikit/dist/js/uikit-icons.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
