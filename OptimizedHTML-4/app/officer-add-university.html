@@ -58,11 +58,7 @@
 					</div>
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
-							<div class="uk-width-1-5">
-								<a href="/"uk-tooltip="title: Ответы на частые вопросы; pos: bottom">
-									<img class="icon icon_top svg" src="img/comment.svg" alt="">
-								</a>
-							</div>
+							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
 						</div>
 					</div>
@@ -110,88 +106,124 @@
 						<li><a href="">Выход</a></li>
 					</ul>
 				</aside>
-				<div class="uk-width-5-6 officer-middle">
-					<div uk-grid
-					     class="">
-						<div class="uk-width-1-6 inline-block">
-							<div class="display-quant">
-								<a class="active">10</a>
+				<div class="uk-width-2-3">
+					<form class="uk-form uk-margin-xlarge-bottom">
+						<div class="input_item_wrap">
+							<label class="block" for="">Название университета</label>
+							<div class="input_item">
+								<input type="text" name="" value="">
 							</div>
-							<div class="display-quant">
-								<a class="">50</a>
 							</div>
-							<div class="display-quant">
-								<a class="">100</a>
+							<div class="input_item_wrap">
+								<label class="block" for="">Тип университета</label>
+								<div class="wrap-uk-radio">
+									<label for=""><input class="uk-radio" type="radio" name="university-type" checked>Государственный</label>
+									<label for=""><input class="uk-radio" type="radio" name="university-type">Частный</label>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="table-wrap-calls">
-						<table class="calls uk-table uk-table-responsive uk-table-divider uk-table-middle">
-							<tbody>
-								<tr>
-									<td class="uk-table-shrink uk-text-nowrap">№ 14204</td>
-									<td class="uk-width-1-6 uk-text-bold">Виктор</td>
-									<td class="uk-table-shrink uk-text-bold">+77774589632</td>
-									<td class="uk-table-shrink uk-text-nowrap">19.11.2016 - 11:28</td>
-									<td>Азербайджан</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="#id14204" class="uk-icon-link" uk-icon="trash" uk-toggle></a>
-									</td>
-								</tr>
-								<tr>
-									<td class="uk-table-shrink uk-text-nowrap">№ 14204</td>
-									<td class="uk-width-1-6 uk-text-bold">Виктор</td>
-									<td class="uk-table-shrink uk-text-bold">+77774589632</td>
-									<td class="uk-table-shrink uk-text-nowrap">19.11.2016 - 11:28</td>
-									<td>Азербайджан</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
-									</td>
-								</tr>
-								<tr>
-									<td class="uk-table-shrink uk-text-nowrap">№ 14204</td>
-									<td class="uk-width-1-6 uk-text-bold">Виктор</td>
-									<td class="uk-table-shrink uk-text-bold">+77774589632</td>
-									<td class="uk-table-shrink uk-text-nowrap">19.11.2016 - 11:28</td>
-									<td>Азербайджан</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
-									</td>
-								</tr>
-								<tr>
-									<td class="uk-table-shrink uk-text-nowrap">№ 14204</td>
-									<td class="uk-width-1-6 uk-text-bold">Виктор</td>
-									<td class="uk-table-shrink uk-text-bold">+77774589632</td>
-									<td class="uk-table-shrink uk-text-nowrap">19.11.2016 - 11:28</td>
-									<td>Азербайджан</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<ul class="uk-pagination uk-flex-center display-quant"
-						    uk-margin>
-							<li><a href="#">В начало</a></li>
-							<li><a class="active" href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#">В конец</a></li>
-						</ul>
-						<div id="id14204"
-						     class="uk-flex-top"
-						     uk-modal>
-							<div class="uk-width-1-5 uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-								<p class="uk-text-center uk-text-bold">Подтвердите удаление</p>
-								<p class="uk-text-center">
-									<button class="btn_transparent flex uk-modal-close" type="button">Отмена</button>
-									<button class="btn_transparent flex" type="button">Удалить</button>
-								</p>
+							<div class="input_item_wrap">
+								<label class="block" for="">Город</label>
+								<div class="wrap-uk-radio">
+									<label for=""><input class="uk-radio" type="radio" name="city" checked>Брно</label>
+									<label for=""><input class="uk-radio" type="radio" name="city">Прага</label>
+									<label for=""><input class="uk-radio" type="radio" name="city">Другие</label>
+								</div>
 							</div>
-						</div>
-					</div>
+							<div class="input_item_wrap upload-photos">
+								<label class="block" for="">Фотографии</label>
+								<div class="uk-grid-small"
+								     uk-grid>
+									<div class="img-hover-container uk-width-1-6">
+										<a href="#">
+											<img class="preview" src="img/vut.jpg" alt="" class="">
+										</a>
+										<div class="icon-in-image">
+											<span uk-icon="icon: trash"></span>
+										</div>
+									</div>
+									<div class="img-hover-container uk-width-1-6">
+										<a href="#">
+											<img src="img/vut.jpg" alt="" class="">
+										</a>
+										<div class="icon-in-image">
+											<span uk-icon="icon: trash"></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="upload-button">
+									<label class="btn_transparent" for="file-upload">
+										<input type="file" id="file-upload" multiple>
+										Загрузить
+									</label>
+								</div>
+							</div>
+							<div class="input_item_wrap textarea-wrap">
+								<label class="block" for="">Описание</label>
+								<div class="inline-block">
+									<div class="display-quant">
+										<button class="uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize cursive" type="button" name="button">к</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize underline" type="button" name="button">П</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize uk-text-bold" type="button" name="button">заголовок</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize cursive" type="button" name="button">Цитата</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize" type="button" name="button">Список</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize" type="button" name="button">Примечание</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize" type="button" name="button">внимание</button>
+									</div>
+								</div>
+								<div class="input_item">
+									<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
+								</div>
+							</div>
+							<div class="input_item_wrap textarea-wrap">
+								<label class="block" for="">Факультеты и специальности</label>
+								<div class="inline-block">
+									<div class="display-quant">
+										<button class="uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize cursive" type="button" name="button">к</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize underline" type="button" name="button">П</button>
+									</div>
+									<div class="display-quant">
+										<button class="uk-text-capitalize" type="button" name="button">Список</button>
+									</div>
+									<div class="display-quant">
+										<button type="button" name="button">Внутренний список</button>
+									</div>
+								</div>
+								<div class="input_item">
+									<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
+								</div>
+							</div>
+							<div class="input_item">
+								<button class="btn_transparent uk-align-right" type="submit" name="button">Опубликовать</button>
+							</div>
+
+					</form>
+				</div>
+				<div class="back-link uk-width-1-6">
+					<a href="">
+							<span uk-icon="icon: chevron-left"></span>
+							<span>Назад</span>
+						</a>
 				</div>
 			</div>
 		</div>
