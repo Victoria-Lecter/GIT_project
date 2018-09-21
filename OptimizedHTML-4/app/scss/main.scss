@@ -606,48 +606,47 @@ footer {
 	a:hover {
 		color: $accent2;
 	}
-	.blog {
+}
+.blog {
 
-		a {
-			font-size: 14px;
-			color: #476ac6;
-			letter-spacing: normal;
-		}
-		p {
-			font-size: 12px;
-			color: #888888;
-			letter-spacing: 0.5px;
-		}
-		.marked-blog {
-			color: #6da2e1;
-		}
-		p:nth-child(odd) {
-			margin-top: 0;
-		}
-		p:nth-child(even) {
-			margin-bottom: 0;
-		}
-		p:first-child {
-			color: #303030;
-			font-size: 11px;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			margin-top: 45px;
-			margin-bottom: 20px;
-		}
+	a {
+		font-size: 14px;
+		color: #476ac6;
+		letter-spacing: normal;
 	}
-	li {
-		line-height: 41px;
-		a {
-			padding: 0;
-			margin-left: -40px;
-			padding-left: 40px;
-			color: #7f7f7f;
-		}
+	p {
+		font-size: 12px;
+		color: #888888;
+		letter-spacing: 0.5px;
+	}
+	.marked-blog {
+		color: #6da2e1;
+	}
+	p:nth-child(odd) {
+		margin-top: 0;
+	}
+	p:nth-child(even) {
+		margin-bottom: 0;
+	}
+	p:first-child {
+		color: #303030;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 45px;
+		margin-bottom: 20px;
 	}
 }
-
+li {
+	line-height: 41px;
+	a {
+		padding: 0;
+		margin-left: -40px;
+		padding-left: 40px;
+		color: #7f7f7f;
+	}
+}
 
 
 
@@ -1158,19 +1157,19 @@ ul li a.active {
 			&:hover {
 				color: $accent2;
 			}
-			&.active {
-				position: relative;
-				&::after {
-					content: "";
-					position: absolute;
-					right: 20px;
-					bottom: 18px;
-					width: 4px;
-					height: 4px;
-					background-color: $accent2;
-					z-index: 100;
-				}
-			}
+			// &.active {
+			// 	position: relative;
+			// 	&::after {
+			// 		content: "";
+			// 		position: absolute;
+			// 		right: 20px;
+			// 		bottom: 18px;
+			// 		width: 4px;
+			// 		height: 4px;
+			// 		background-color: $accent2;
+			// 		z-index: 100;
+			// 	}
+			// }
 		}
 	}
 }
@@ -1352,4 +1351,140 @@ ul li a.active {
 		}
 	}
 }
-// @import "media"; // Always at the end
+
+// .accomodation-top {
+// 	position: relative;
+// 	.dormitory-background {
+// 		width: 100%;
+// 		height: 100%;
+// 		object-fit: cover;
+// 	}
+// 	.image-overlay {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		.dormitory {
+// 			font-size: 30px;
+// 			color: white;
+// 			font-weight: bold;
+// 		}
+// 	}
+// }
+.photo-scroll {
+	height: 5px;
+	background-color: white;
+	border: none;
+	&.active {
+		background-color: $accent2;
+	}
+}
+.dormitory-block {
+	.dormitory-nested {
+		background-color: white;
+	}
+	&.uk-grid-margin {
+		margin-top: 20px;
+	}
+	h2 {
+		font-size: 16px;
+		text-transform: capitalize;
+		margin-bottom: 0;
+		padding: 20px;
+		&.active {
+			color: $accent2;
+		}
+	}
+	ul {
+		list-style: none;
+		line-height: 1.7;
+		margin: 0;
+		padding: 15px 20px;
+		border-bottom: 1px solid #e5e5e5;
+		li {
+			//position: relative;
+			margin-left: 10px;
+			padding-left: 5px;
+			.list-item {
+				width: 4px;
+				height: 4px;
+				background-color: $accent2;
+				margin-right: 5px;
+			}
+		}
+		// li::before {
+		// 	content: "";
+		// 	margin-right: 20px;
+		// 	width: 4px;
+		// 	height: 4px;
+		// 	background-color: $accent2;
+		// 	z-index: 100;
+		// 	position: absolute;
+		// 	top: 8px;
+		// 	left: -10px;
+		// }
+	}
+	.dormitory-block-bottom {
+		position: relative;
+		margin: 20px;
+		p {
+			margin: 0;
+			&:last-of-type {
+				font-size: 12px;
+				color: #7f7f7f;
+				padding-bottom: 20px;
+			}
+		}
+		.btn_transparent {
+			position: absolute;
+			top: 0;
+			right: 0;
+			//cursor: pointer;
+		}
+	}
+}
+.accomodation {
+	.btn_transparent {
+		width: 100%;
+		color: #303030;
+		font-weight: normal;
+		font-size: 15px;
+		border-color: #cccccc;
+		border-left: none;
+		&:first-of-type {
+			border-left: 1px solid #cccccc;
+		}
+		&.active {
+			background-color: #d3dbf1;
+			border-color: #6c88d1;
+		}
+	}
+}
+.dormitory-overlay {
+
+	h2 {
+		color: white;
+	}
+}
+.image-line {
+	img {
+		border: 5px solid white;
+	}
+}
+.padding-bottom {
+	background-color: white;
+	padding-bottom: 60px;
+}
+.accomodation-info {
+	background-color: white;
+	padding: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.accomodation-bottom {
+	a {
+		margin-right: 10px;
+	}
+	.button {
+		margin-left: 10px;
+	}
+}
+//@import "media"; // Always at the end

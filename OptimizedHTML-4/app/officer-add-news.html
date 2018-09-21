@@ -58,7 +58,11 @@
 					</div>
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
-							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
+							<div class="uk-width-1-5">
+								<a href="/"uk-tooltip="title: Ответы на частые вопросы; pos: bottom">
+									<img class="icon icon_top svg" src="img/comment.svg" alt="">
+								</a>
+							</div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
 						</div>
 					</div>
@@ -108,9 +112,9 @@
 				</aside>
 				<div class="uk-width-2-3">
 					<form class="uk-form add-news uk-height-medium">
-						<div class="upload-button flex uk-width-1-1 uk-align-center">
-							<label class="btn_transparent" for="file-upload">
-								<input type="file" id="file-upload" multiple>
+						<div class="upload-button uk-width-1-1">
+							<label class="uk-position-absolute uk-transform-center btn_transparent" for="file-upload" style="left: 50%; top: 50%">
+								<input type="file" id="file-upload">
 								Загрузить фоторафию
 							</label>
 						</div>
