@@ -551,11 +551,13 @@ h3.uk-card-title {
 	}
 }
 footer {
-	height: auto;
 	padding-top: 68px;
 	padding-bottom: 10px;
 	margin-top: 50px;
 	background-color: white;
+	.footer-top {
+		padding-bottom: 50px;
+	}
 	.socials {
 		a {
 			color: #cccccc;
@@ -583,24 +585,10 @@ footer {
 	.uk-nav>li>a {
 		margin-top: 9px;
 		margin-bottom: 9px;
-	}
-	.footer_h {
-		font-weight: bold;
-		font-size: 15px;
-		margin-bottom: 25px;
 		color: #212121;
-	}
-	.footer-two {
-		margin-left: 100px;
-		margin-right: -70px;
-	}
-	.footer-three {
-		margin-left: 170px;
-		margin-right: -10px;
-	}
-	.footer-four {
-		margin-left: 150px;
-		margin-right: -10px;
+		&:hover {
+			color: $accent2;
+		}
 	}
 	hr {
 		margin-top: 61px;
@@ -609,6 +597,8 @@ footer {
 .foot-bottom {
 	color: #7f7f7f;
 	letter-spacing: 1px;
+	border-top: 1px solid #e5e5e5;
+	padding-top: 10px;
 }
 //STUDENT
 .student-main {
@@ -628,8 +618,7 @@ footer {
 	}
 }
 .blog {
-
-	a {
+	a:link {
 		font-size: 14px;
 		color: #476ac6;
 		letter-spacing: normal;
@@ -1089,34 +1078,76 @@ ul li a.active {
 			width: 96%;
 		}
 	}
-	.table-wrap, {
-		margin-left: -40px;
-		margin-top: 20px;
+}
 
-		.display-quant a {
-			border-left: none;
-		}
-
+.table-wrap {
+	margin-left: -40px;
+	margin-top: 20px;
+	&.student {
 		table {
-			width: 100%;
-			background-color: white;
-			border-collapse: collapse;
-			tr{
-				border-bottom: 1px solid #e5e5e5;
-				td{
-					color: #888;
-					vertical-align: middle;
-					span{
-						font-weight: bold;
-						display: block;
-						color: black;
+			tr {
+				td {
+					padding: 20px 10px;
+					padding-right: 50px;
+					.uk-icon-link {
+						color: #ccc;
+						&:hover {
+							color: #303030;
+						}
+					}
+					&:first-of-type {
+						padding: 10px;
+						padding-left: 20px;
+						img {
+							border-radius: 50%;
+						}
+					}
+					&:last-of-type {
+						padding-right: 30px;
+						text-align: right;
+					}
+					div[uk-dropdown] {
+						padding: 8px 10px;
+						min-width: auto;
+						// box-shadow: none;
+						// border: 1px solid #e5e5e5;
+						.icon {
+							height: 20px;
+							margin-left: 5px;
+							margin-right: 0px;
+						}
+						.uk-iconnav>* {
+							margin: auto;
+							padding-left: 5px;
+							&>a {
+								color: #cccccc;
+								&:hover {
+								color: #a6a4a4;
+								}
+							}
+						}
 					}
 				}
 			}
-			img {
-				padding-left: 20px;
-			}
+		}
+	}
+	table {
+		width: 100%;
+		background-color: white;
+		border-collapse: collapse;
+		tr {
+			border-bottom: 1px solid #e5e5e5;
+			//height: 70px;
+			td {
+				color: #888;
+				vertical-align: middle;
 
+				span {
+					font-weight: bold;
+					display: block;
+					color: black;
+				}
+			}
 		}
 	}
 }
@@ -1132,9 +1163,13 @@ ul li a.active {
 .display-quant {
 	padding-left: 0;
 	padding-right: 10px;
+	&.display-num>* {
+		margin-right: 5px;
+	}
 	a, button {
 		background-color: white;
 		width: auto;
+		font-size: 14px;
 		padding: 0 8px;
 		height: 30px;
 		line-height: 33px;
@@ -1148,6 +1183,16 @@ ul li a.active {
 		&:hover {
 			text-decoration: none;
 		}
+	}
+	li a {
+		border-left: none;
+		padding: 0 12px;
+	}
+	li:first-of-type a {
+		border-left: 1px solid #cccccc;
+	}
+	li a.active {
+		border-left: 1px solid #6c88d1;
 	}
 }
 .sidebar-left {
@@ -1235,8 +1280,8 @@ ul li a.active {
 			img {
 	  	opacity: 1;
 	  	display: block;
-			height: auto;
-			width: 100%;
+			height: 100px;
+			width: 100px;
 			object-fit: cover;
 	  	transition: .5s ease;
 	  	backface-visibility: hidden;
@@ -1357,25 +1402,6 @@ ul li a.active {
 		}
 	}
 }
-
-// .accomodation-top {
-// 	position: relative;
-// 	.dormitory-background {
-// 		width: 100%;
-// 		height: 100%;
-// 		object-fit: cover;
-// 	}
-// 	.image-overlay {
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		.dormitory {
-// 			font-size: 30px;
-// 			color: white;
-// 			font-weight: bold;
-// 		}
-// 	}
-// }
 .photo-scroll {
 	height: 5px;
 	background-color: white;
@@ -1466,12 +1492,24 @@ ul li a.active {
 		}
 	}
 }
-.dormitory-overlay {
-
+.bcg-for-overlay {
+	.shade-on-image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to top, rgba(black, .99) 0%, transparent 100%);
+	}
 	h2 {
 		color: white;
 		margin-top: -120px;
 		font-weight: bold;
+		font-size: 30px;
+		letter-spacing: 1px;
+		position: relative;
+		z-index: 1000;
+		text-transform: none;
 	}
 }
 .image-line {
@@ -1479,17 +1517,22 @@ ul li a.active {
 	position: relative;
 	z-index: 100;
 	text-align: center;
+	font-size: 0;
+	.uk-overlay-default {
+		position: relative;
+	}
 	img {
 		border: 5px solid white;
+		border-left: none;
+		height: 120px;
+		object-fit: cover;
+		&:first-child {
+			border-left: 5px solid white;
+		}
 	}
 }
-
-.bgc_white{
+.bcg_white{
 	background-color: #fff;
-}
-.padding-bottom {
-	background-color: white;
-	padding-bottom: 60px;
 }
 .accomodation-info {
 	background-color: white;

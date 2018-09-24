@@ -81,7 +81,7 @@
 							</button>
 									<div uk-dropdown="pos: bottom-right; offset: 30">
 										<ul class="uk-nav uk-dropdown-nav">
-											<li class="uk-active"><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Личный кабинет</a></li>
+											<li class="uk-active"><a href="#"><span uk-icon="icon: user" class="icon-drop-menu"></span>Личный кабинет</a></li>
 											<li><a href="#"><span uk-icon="icon: file-edit" class="icon-drop-menu"></span>Моя анкета</a></li>
 											<li><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Оплата услуг</a></li>
 											<li><a href="#"><span uk-icon="icon: pencil" class="icon-drop-menu"></span>Изменить пароль</a></li>
@@ -109,16 +109,10 @@
 				<div class="uk-width-5-6 officer-middle">
 					<div uk-grid
 					     class="">
-						<div class="uk-width-1-6 inline-block">
-							<div class="display-quant">
-								<a class="active">10</a>
-							</div>
-							<div class="display-quant">
-								<a class="">50</a>
-							</div>
-							<div class="display-quant">
-								<a class="">100</a>
-							</div>
+						<div class="uk-width-1-6 uk-inline display-quant display-num">
+							<button class="active" type="button" name="button">10</button>
+							<button type="button" name="button">50</button>
+							<button type="button" name="button">100</button>
 						</div>
 						<div class="uk-width-5-6">
 							<button class="uk-align-right btn_transparent" type="button" name="button">Добавить университет</button>
@@ -179,32 +173,39 @@
 	<footer>
 		<div class="footer-top">
 			<div class="uk-container">
-				<div class="uk-grid uk-grid-medium">
-					<div class="footer-one uk-width-medium">
+				<div class="uk-grid uk-child-width-1-4">
+					<div>
 						<a class="logo-footer" href="/">
             <img src="img/logo.png" alt="">
           </a>
 						<p>Мы в соцсетях:</p>
+						<div class="socials">
+							<a href=""><img class="icon svg" src="img/facebook-f-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/vk-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/odnoklassniki-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/twitter-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/instagram-brands.svg" alt=""></a>
+						</div>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-two">
-							<li class="footer_h">Услуги</li>
-							<li><a href="">Высшее образование в Чехии</a></li>
+					<div>
+						<h3>Услуги</h3>
+						<ul class="uk-nav">
+							<li><a class="svg" href="">Высшее образование в Чехии</a></li>
 							<li><a href="">Курсы чешского языка</a></li>
 							<li><a href="">Онлайн-курс чешского языка</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-three">
-							<li class="footer_h">О компании</li>
+					<div>
+						<h3>О компании</h3>
+						<ul class="uk-nav">
 							<li><a href="">Наша команда</a></li>
 							<li><a href="">Контакты</a></li>
 							<li><a href="">Представительства</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="footer-four uk-nav">
-							<li class="footer_h">Медиатека</li>
+					<div>
+						<h3>Медиатека</h3>
+						<ul class="uk-nav">
 							<li><a href="">Фотографии</a></li>
 							<li><a href="">Видео</a></li>
 							<li><a href="">Наш блог о Чехии</a></li>
@@ -213,7 +214,6 @@
 				</div>
 			</div>
 		</div>
-		<hr>
 		<div class="foot-bottom">
 			<div class="uk-container">
 				<div class="uk-grid">
