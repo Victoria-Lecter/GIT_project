@@ -130,7 +130,13 @@ hr {
 	height: 70px;
 	padding: 20px;
 }
-
+.gradient {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
 .main_header{
 	position: relative;
 	overflow: hidden;
@@ -140,11 +146,6 @@ hr {
 			margin-top: -210px;
 		}
 	.gradient {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
 		background-image: linear-gradient(to right, rgba(black, .7) 0%, transparent 80%);
 	}
 	.opaque_rectangle{
@@ -1482,6 +1483,7 @@ ul li a.active {
 		font-size: 15px;
 		border-color: #cccccc;
 		border-left: none;
+		padding: 7px 30px;
 		&:first-of-type {
 			border-left: 1px solid #cccccc;
 		}
@@ -1492,15 +1494,16 @@ ul li a.active {
 		}
 	}
 }
+.shade-on-image {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to top, rgba(black, .99) 0%, transparent 100%);
+}
 .bcg-for-overlay {
-	.shade-on-image {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-image: linear-gradient(to top, rgba(black, .99) 0%, transparent 100%);
-	}
 	h2 {
 		color: white;
 		margin-top: -120px;
@@ -1539,7 +1542,7 @@ ul li a.active {
 	padding: 20px;
 	border-bottom: 1px solid #e5e5e5;
 }
-.accomodation-bottom {
+.bottom {
 	a {
 		margin-right: 10px;
 	}
@@ -1616,11 +1619,6 @@ ul li a.active {
 			letter-spacing: 1px;
 		}
 		.gradient {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
 			background-color: rgba(#3f4748, .7);
 		}
 	}
@@ -1684,6 +1682,7 @@ ul li a.active {
 }
 
 .list{
+	list-style: none;
 	&.program-include{
 		li:before{
 			background-color: $accent2;
@@ -1714,6 +1713,7 @@ ul li a.active {
 
 }
 .problem {
+	padding-top: 10px;
 	h2 {
 		text-transform: none;
 		font-size: 18px;
@@ -1811,6 +1811,177 @@ ul li a.active {
 			font-size: 12px;
 			font-weight: normal;
 		}
+	}
+}
+.bottom-border-top {
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	padding-bottom: 5px;
+}
+.text-information {
+	padding: 20px;
+	h3 {
+		margin-bottom: 0;
+		margin-top: 5px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	h2 {
+		font-weight: bold;
+		font-size: 30px;
+		letter-spacing: 1px;
+		text-transform: none;
+	}
+	p.info {
+		text-transform: uppercase;
+		color: $accent2;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		.icon {
+			height: 25px;
+		}
+	}
+	.text-block {
+		background-color: #f5f6fa;
+		font-style: italic;
+		font-size: 15px;
+		padding: 20px;
+		margin-bottom: 30px;
+		& p {
+			margin-bottom: 0;
+		}
+	}
+	.gradient {
+		background-color: rgba(#3f4748, .7);
+	}
+	.list {
+		padding: 20px;
+		padding-bottom: 0;
+		list-style: none;
+		margin-bottom: 0;
+		&.columns {
+			column-count: 2;
+			column-gap: 40px;
+		}
+		li::before {
+			background-color: $accent2;
+			left: -13px;
+		}
+		&.list2 {
+			list-style: none;
+			padding-top: 15px;
+			padding-bottom: 25px;
+			padding-left: 30px;
+			li::before {
+				height: 2px;
+				width: 2px;
+				background-color: white;
+				border: 1px solid $accent2;
+			}
+		}
+	}
+}
+.toggle-block {
+	background-color: white;
+	padding: 20px 25px;
+	margin-bottom: 20px;
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: none;
+			margin: 0;
+			span {
+				padding-top: 3px;
+			}
+		}
+	}
+	.toggle-usage {
+		padding-top: 20px;
+		p {
+			margin-top: 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		h3 {
+			margin: 0;
+			padding-top: 5px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		ul {
+			padding-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			li:before{
+				background-color: $accent2;
+				top: 10px;
+				left: -14px;
+			}
+		}
+	}
+}
+.side-right {
+	h2 {
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: none;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+}
+.univer-block {
+	background-color: white;
+	margin-top: 20px;
+	.uk-cover-container {
+		position: relative;
+	}
+	&:first-child {
+		margin-right: 5px;
+	}
+	h2 {
+		text-transform: none;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 20px;
+		margin: 0;
+	}
+	h3 {
+		position: relative;
+		z-index: 1000;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	.text {
+		height: 110px;
+		overflow: hidden;
+		box-shadow: inset 0px -20px 0px 0px rgba(255,255,255,1);
+		p {
+			margin: 0;
+			padding: 20px;
+			font-size: 15px;
+		}
+	}
+	.uk-overlay {
+		padding: 20px;
+	}
+	.shade-on-image {
+		background-image: linear-gradient(to top, rgba(black, .8) 0%, transparent 80%);
+	}
+}
+.top-checkboxes {
+	margin-top: 7px;
+	label {
+		padding-right: 10px;
 	}
 }
 
