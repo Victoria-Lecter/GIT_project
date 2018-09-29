@@ -1,4 +1,10 @@
+// $('.toggle-content').slideUp();
+
 $(function() {
+  $('.toggle-top').click(function() {
+    $(this).next().slideToggle()
+    $(this).children('h2').children('span').toggleClass('rotate_arrow');
+  })
 
   /*
  * Replace all SVG images with inline SVG

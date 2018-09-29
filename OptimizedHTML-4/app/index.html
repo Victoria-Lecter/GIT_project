@@ -58,7 +58,7 @@
 					</div>
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
-							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip:" pos: bottom"><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
+							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
 						</div>
 					</div>
@@ -97,15 +97,16 @@
 	</header>
 	<main class="officer-main">
 		<div class="uk-container">
-			<div class="uk-grid">
-				<aside class="sidebar-left uk-width-1-6">
+			<div class="uk-grid-small"
+			     uk-grid>
+				<aside class="sidebar-left uk-width-1-5">
 					<ul class="uk-nav">
 						<li><a class="active" href="">Проживание</a></li>
-						<li><a href="">Проживание</a></li>
+						<li><a href="">Высшее образование</a></li>
 						<li><a href="">Проживание</a></li>
 						<li><a href="">Проживание</a></li>
 					</ul>
-					<div class="blog">
+					<div class="blog uk-width-5-6">
 						<p>Популярное в блоге</p>
 						<p><a href="/">Чешская кухня или самая
 						вкусная еда на земле!</a></p>
@@ -118,60 +119,100 @@
 						<p>4523 просмотра</p>
 					</div>
 				</aside>
-				<div class="uk-width-5-6">
-					<div class="uk-padding-remove uk-flex-inline accomodation">
-						<button class="btn_transparent active" type="button" name="button">Брно</button>
-						<button class="btn_transparent" type="button" name="button">Прага</button>
-						<button class="btn_transparent" type="button" name="button">Другие</button>
-					</div>
-					<form class="uk-inline uk-align-right top-checkboxes"
-					      action="index.html"
-					      method="post">
-						<input class="uk-checkbox" type="checkbox" name="" value="">
-						<label for="">Только государственные</label>
-						<input class="uk-checkbox" type="checkbox" name="" value="">
-						<label for="">Только частные</label>
-					</form>
-					<div class="uk-grid-small"
-					     uk-grid>
-						<div class="uk-width-1-2">
-							<div class="univer-block">
-								<h2>Технический университет</h2>
-								<div class="uk-cover-container">
-									<canvas width="" height=""></canvas>
-									<img src="img/vut1.jpg" alt="" uk-cover>
-									<div class="uk-overlay uk-position-bottom uk-light">
-										<h3>Lorem ipsum <span class="uk-align-right">lorem</span></h3>
+				<div class="uk-width-3-5">
+					<form class="uk-form">
+						<div class="input_item_wrap">
+							<label class="block" for="">Название университета</label>
+							<div class="input_item">
+								<input type="text" name="" value="">
+							</div>
+							</div>
+							<div class="input_item_wrap">
+								<label class="block" for="">Тип университета</label>
+								<div class="wrap-uk-radio">
+									<label for=""><input class="uk-radio" type="radio" name="university-type" checked>Государственный</label>
+									<label for=""><input class="uk-radio" type="radio" name="university-type">Частный</label>
+								</div>
+							</div>
+							<div class="input_item_wrap">
+								<label class="block" for="">Город</label>
+								<div class="wrap-uk-radio">
+									<label for=""><input class="uk-radio" type="radio" name="city" checked>Брно</label>
+									<label for=""><input class="uk-radio" type="radio" name="city">Прага</label>
+									<label for=""><input class="uk-radio" type="radio" name="city">Другие</label>
+								</div>
+							</div>
+							<div class="input_item_wrap upload-photos">
+								<label class="block bottom10" for="">Фотографии</label>
+								<div class="uk-grid-small uk-child-width-1-6"
+								     uk-grid>
+									<div>
+										<div class="img-hover-container">
+											<img class="preview" src="img/vut.jpg" alt="" class="">
+											<a class="icon-in-image" href="#">
+													<img class="icon svg" src="img/trash-alt-regular.svg" alt="">
+												</a>
+										</div>
 									</div>
-									<div class="shade-on-image"></div>
+									<div>
+										<div class="img-hover-container">
+											<img class="preview" src="img/vut.jpg" alt="" class="">
+											<a class="icon-in-image" href="#">
+													<img class="icon svg" src="img/trash-alt-regular.svg" alt="">
+												</a>
+										</div>
+									</div>
 								</div>
-								<div class="text">
-									<p>Годовой подготовительный курс чешского языка
-										предназначен для желающих учиться на одном из шести
-										факультетов ВШЕ в Праге. Концепция и содержание
-										программы разработаны с учетом требований
-										вступительных экзаменов в VŠE в Праге (на бакалаврские и
-										магистерские программы). dhdh dhhdhd hdhdhhd</p>
+
+								<div class="upload-button">
+									<label class="btn_transparent" for="file-upload">
+										<input type="file" id="file-upload" multiple>
+										Загрузить
+									</label>
 								</div>
 							</div>
-						</div>
-						<div class="uk-width-1-2">
-							<div class="uk-width-2-3">
-								<div class="problem">
-									<h2>Не можете определиться
-									с университетом?</h2>
-									<p class="uk-width-2-3"><a href="#">Напишите нам</a> и мы
-										поможем Вам выбрать
-										подходящую программу.</p>
+							<div class="input_item_wrap textarea-wrap">
+								<label class="block bottom10" for="">Описание</label>
+								<div class="display-quant">
+									<button class="square uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
+									<button class="square uk-text-capitalize cursive" type="button" name="button">к</button>
+									<button class="square uk-text-capitalize underline" type="button" name="button">П</button>
+									<button class="uk-text-capitalize uk-text-bold" type="button" name="button">заголовок</button>
+									<button class="uk-text-capitalize cursive" type="button" name="button">Цитата</button>
+									<button class="uk-text-capitalize" type="button" name="button">Список</button>
+									<button class="uk-text-capitalize" type="button" name="button">Примечание</button>
+									<button class="uk-text-capitalize" type="button" name="button">внимание</button>
+								</div>
+								<div class="input_item">
+									<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
 								</div>
 							</div>
-						</div>
+							<div class="input_item_wrap textarea-wrap">
+								<label class="block bottom10" for="">Факультеты и специальности</label>
+								<div class="display-quant">
+									<button class="square uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
+									<button class="square uk-text-capitalize cursive" type="button" name="button">к</button>
+									<button class="square uk-text-capitalize underline" type="button" name="button">П</button>
+									<button class="uk-text-capitalize" type="button" name="button">Список</button>
+									<button type="button" name="button">Внутренний список</button>
+								</div>
+								<div class="input_item">
+									<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
+								</div>
+							</div>
+							<div class="input_item">
+								<button class="btn_transparent uk-align-right" type="submit" name="button">Опубликовать</button>
+							</div>
 
-
-					</div>
+					</form>
+				</div>
+				<div class="back-link uk-width-1-5">
+					<a href="">
+							<span uk-icon="icon: chevron-left"></span>
+							<span>Назад</span>
+						</a>
 				</div>
 			</div>
-		</div>
 		</div>
 		</div>
 	</main>
