@@ -47,7 +47,6 @@ h2 {
 		width: 100%;
 	}
 }
-
 .text-center {
 	text-align: center;
 }
@@ -78,7 +77,10 @@ header {
 header .uk-navbar-nav li a:hover {
 	color: $accent2;
 }
-
+svg {
+	height: 16px;
+	padding-right: 5px;
+}
 .header_top, .uk-navbar-nav>li>a {
 	font-size: 15px;
 	font-family: Arial;
@@ -88,6 +90,13 @@ header .uk-navbar-nav li a:hover {
 .header_bottom {
 	padding: 15px 0;
 	border-top: 1px solid #e5e5e5;
+	.contact_info_top {
+		svg {
+			path {
+				fill: $accent2;
+			}
+		}
+	}
 }
 .logo-header img {
 	margin: 20px 20px 20px 0px;
@@ -103,11 +112,10 @@ header .uk-navbar-nav li a:hover {
 	box-shadow: 0px 3px #d0ad24;
 	padding: 9px 0;
 	margin-left: 15px;
-	height: 32px;
 	width: 166px;
 	cursor: pointer;
 	&:hover {
-		background-color: darken($accent, 10%);
+		background-color: lighten($accent, 7%);
 	}
 }
 header a {
@@ -118,7 +126,11 @@ header a {
 		color: inherit;
 	}
 }
-
+.button {
+	&:active {
+		box-shadow: none;
+	}
+}
 .header_top {
 	height: 70px;
 }
@@ -569,11 +581,12 @@ footer {
 	.socials {
 		a {
 			color: #cccccc;
+			text-decoration: none;
 			&:hover {
 				color: #9d9a9a;
 			}
 		}
-		.icon {
+		svg {
 			margin-right: 15px;
 			height: 20px;
 		}
@@ -918,6 +931,9 @@ footer {
 	padding: 8px 20px;
 	letter-spacing: .5;
 	cursor: pointer;
+	&:hover {
+		border-color: darken(#e5e5e5, 10%);
+	}
 }
 .input_item > .btn_transparent {
 	margin: 0;
@@ -1050,6 +1066,43 @@ ul li a.active {
 .uk-pagination>* {
 	padding-left: 0;
 }
+.uk-pagination {
+	&.display-quant {
+		li {
+			a {
+				border-left: none;
+				padding: 0 12px;
+				background-color: white;
+				width: auto;
+				font-size: 14px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				color: #303030;
+				border: 1px solid #ccc;
+				border-left: none;
+				cursor: pointer;
+				&.active {
+					background-color: #ccd4e9;
+					border-color: #6c88d1;
+					&:hover {
+						border-color: #6c88d1;
+						background-color: #ccd4e9;
+					}
+				}
+				&:hover {
+					background-color: darken(#fff, 5%);
+				}
+			}
+		}
+		li:first-of-type a {
+			border-left: 1px solid #cccccc;
+		}
+		li a.active {
+			border-left: 1px solid #6c88d1;
+		}
+	}
+}
 .officer-main {
 	background-color: #f6f5f3;
 	padding-top: 20px;
@@ -1181,7 +1234,6 @@ ul li a.active {
 		font-size: 14px;
 		padding: 0 8px;
 		height: 30px;
-		line-height: 33px;
 		text-align: center;
 		color: #303030;
 		border: 1px solid #cccccc;
@@ -1199,25 +1251,20 @@ ul li a.active {
 		font-size: 14px;
 		padding: 0 8px;
 		height: 30px;
-		line-height: 33px;
 		text-align: center;
 		color: #303030;
-		border: 1px solid #cccccc;
+		border: 1px solid #ccc;
 		cursor: pointer;
 		&.active {
 			background-color: #ccd4e9;
 			border-color: #6c88d1;
+			&:hover {
+				border-color: #6c88d1;
+			}
 		}
-	}
-	li a {
-		border-left: none;
-		padding: 0 12px;
-	}
-	li:first-of-type a {
-		border-left: 1px solid #cccccc;
-	}
-	li a.active {
-		border-left: 1px solid #6c88d1;
+		&:hover {
+			border-color: darken(#ccc, 10%);
+		}
 	}
 }
 .sidebar-left {
@@ -1260,9 +1307,13 @@ ul li a.active {
 	display: block;
 }
 .upload-button {
+	margin-top: 20px;
 	label.btn_transparent {
 		color: #6c88d1;
 		border-color: #e5e5e5;
+		&:hover {
+			border-color: darken(#e5e5e5, 10%);
+		}
 	}
 	input[type="file"] {
 	display: none;
@@ -1278,9 +1329,11 @@ ul li a.active {
 			}
 		}
 		img {
-	  	display: block;
-			height: 100px;
-			width: 100px;
+	  	// display: block;
+			// height: 100px;
+			// width: 100px;
+			min-width: 100px;
+			min-height: 100px;
 			object-fit: cover;
 	  	transition: .5s ease;
 		}
@@ -1308,11 +1361,9 @@ ul li a.active {
 .bottom10 {
 	margin-bottom: 10px;
 }
-.upload-button {
-	margin-top: 20px;
-}
-.textarea-wrap {
-	.display-quant {
+
+.display-quant {
+	&.comment-buttons {
 		button {
 			width: auto;
 			margin-right: 7px;
@@ -1327,12 +1378,19 @@ ul li a.active {
 			&.square {
 				width: 30px;
 			}
+
 		}
+	}
+}
+
+.textarea-wrap {
+	&.input_item {
+		margin-bottom: 10px;
 	}
 	textarea {
 		font-family: Arial;
 		padding-top: 10px;
-		width: 96%;
+		width: 95%;
 		height: 295px;
 	}
 }
@@ -1347,12 +1405,26 @@ ul li a.active {
 		margin-bottom: 15px;
 	}
 }
+label {
+	color: #656565;
+}
 .add-news {
-	background-color: #eeeeee;
-	position: relative;
-	label {
+	form:first-of-type {
+		position: relative;
+		background-color: #eeeeee;
+	}
+	label.btn_transparent {
 		background-color: white;
 		border: none;
+		&:hover {
+			border: 1px solid #ccc;
+		}
+	}
+	button[type="submit"] {
+		margin-bottom: -5px;
+	}
+	.input_item_wrap {
+		margin-right: 5px;
 	}
 }
 .table-wrap-university, .table-wrap-calls {
@@ -1370,6 +1442,9 @@ ul li a.active {
 			padding-left: 20px;
 			color: #888888;
 		}
+		tr svg path {
+				fill: #ccc;
+			}
 	}
 	.calls {
 		tr td {
@@ -1385,11 +1460,6 @@ ul li a.active {
 				color: #888888;
 			}
 		}
-	}
-}
-.table-wrap-calls {
-	.display-quant a {
-		border-left: none;
 	}
 }
 .uk-modal-body {
@@ -1413,13 +1483,34 @@ ul li a.active {
 	height: 5px;
 	background-color: white;
 	border: none;
+	margin: 0 5px;
 	&.active {
 		background-color: $accent2;
 	}
 }
 .dormitory-block {
-	.dormitory-nested {
-		background-color: white;
+	div[uk-slideshow] {
+		.dotnav-wrap {
+			width: 100%;
+
+			.uk-dotnav {
+				padding: 0 50px;
+				li {
+					padding: 0;
+					margin: 0 5px;
+					&.uk-active a{
+						background-color: $accent2;
+					}
+					a {
+						width: 100%;
+						background-color: #fff;
+						border-radius: 0;
+						height: 4px;
+						border: none;
+					}
+				}
+			}
+		}
 	}
 	&.uk-grid-margin {
 		margin-top: 20px;
@@ -1434,39 +1525,26 @@ ul li a.active {
 		}
 	}
 	ul {
-		list-style: none;
-		line-height: 1.7;
 		margin: 0;
-		padding: 15px 20px;
-		border-bottom: 1px solid #e5e5e5;
-		li {
-			//position: relative;
-			margin-left: 10px;
-			padding-left: 5px;
-			.list-item {
-				width: 4px;
-				height: 4px;
-				background-color: $accent2;
-				margin-right: 5px;
+		padding: 15px 35px;
+		&.list {
+			li {
+				&::before {
+					top: 9px;
+					left: -15px;
+				}
 			}
 		}
 	}
 	.dormitory-block-bottom {
-		position: relative;
-		margin: 20px;
+		padding: 20px;
+		border-top: 1px solid #e5e5e5;
 		p {
 			margin: 0;
 			&:last-of-type {
 				font-size: 12px;
 				color: #7f7f7f;
-				padding-bottom: 20px;
 			}
-		}
-		.btn_transparent {
-			position: absolute;
-			top: 0;
-			right: 0;
-			//cursor: pointer;
 		}
 	}
 }
@@ -1486,6 +1564,12 @@ ul li a.active {
 			background-color: #d3dbf1;
 			border-color: #6c88d1;
 			border-left: 1px solid #6c88d1;
+			&:hover {
+				background-color: #d3dbf1;
+			}
+		}
+		&:hover {
+			background-color: darken(#fff, 5%);
 		}
 	}
 }
@@ -1506,7 +1590,7 @@ ul li a.active {
 		font-size: 30px;
 		letter-spacing: 1px;
 		position: relative;
-		z-indexgradient: 1000;
+		z-index: 1000;
 		text-transform: none;
 	}
 }
@@ -1545,7 +1629,72 @@ ul li a.active {
 		margin-left: 10px;
 	}
 }
+
+.galery_img{
+	position: relative;
+	font-size: 15px;
+	display: inline-block;
+	overflow: hidden;
+	a{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: block;
+		background-color: rgba(white, .6);
+		text-align: center;
+		z-index: 100;
+		color: black;
+		padding-top: 45px;
+	}
+	img{
+		position: relative;
+		z-index: 99;
+	}
+}
+
 .login {
+	div[uk-dropdown] {
+		padding: 0;
+		form {
+			.form-top {
+				padding: 10px 25px;
+				.password {
+					position: relative;
+					span {
+						position: absolute;
+						top: 5px;
+						right: 0;
+					}
+				}
+				.uk-input {
+					height: 35px;
+					border: none;
+					border-bottom: 1px solid #ccc;
+					color: #808080;
+
+				}
+				p {
+					color: #808080;
+					font-size: 13px;
+					margin-bottom: 0;
+					margin-top: 10px;
+				}
+			}
+			button {
+				width: 100%;
+				background-color: #3f84e4;
+				color: #fff;
+				text-transform: none;
+				font-size: 15px;
+				font-weight: bold;
+			}
+		}
+	}
+	svg path {
+		fill: $accent2;
+	}
 	.user-button {
 		margin-right: 15px;
 		span {
@@ -1554,6 +1703,9 @@ ul li a.active {
 		}
 	}
 }
+
+
+
 .program {
 	background-color: white;
 
@@ -1678,11 +1830,6 @@ ul li a.active {
 
 .list{
 	list-style: none;
-	&.program-include{
-		li:before{
-			background-color: $accent2;
-		}
-	}
 	&.program-not-include{
 		li:before{
 			background-color: #fa2a15;
@@ -1690,7 +1837,7 @@ ul li a.active {
 	}
 	li{
 		position: relative;
-		font-size: 15px;
+		font-size: 14px;
 		span {
 			display: block;
 			font-style: italic;
@@ -1703,6 +1850,7 @@ ul li a.active {
 			height: 4px;
 			left: -20px;
 			top: 8px;
+			background-color: $accent2;
 		}
 	}
 
@@ -1879,6 +2027,9 @@ ul li a.active {
 		padding-bottom: 0;
 		list-style: none;
 		margin-bottom: 0;
+		li {
+			padding-bottom: 8px;
+		}
 		&.columns {
 			column-count: 2;
 			column-gap: 40px;
@@ -2041,7 +2192,6 @@ ul li a.active {
 	.bcg-for-overlay {
 		h2 {
 			margin: 0;
-
 			font-size: 36px;
 		}
 	}

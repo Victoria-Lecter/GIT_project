@@ -52,17 +52,13 @@
 								<li><a href="/">Образование</a></li>
 								<li><a href="/">Проживание</a></li>
 								<li><a href="/">Медиатека</a></li>
-								<li><a href="/">О нас</a></li>
+								<li class="uk-text-nowrap"><a href="/">О нас</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
-							<div class="uk-width-1-5">
-								<a href="/"uk-tooltip="title: Ответы на частые вопросы; pos: bottom">
-									<img class="icon icon_top svg" src="img/comment.svg" alt="">
-								</a>
-							</div>
+							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
 						</div>
 					</div>
@@ -85,7 +81,7 @@
 							</button>
 									<div uk-dropdown="pos: bottom-right; offset: 30">
 										<ul class="uk-nav uk-dropdown-nav">
-											<li class="uk-active"><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Личный кабинет</a></li>
+											<li class="uk-active"><a href="#"><span uk-icon="icon: user" class="icon-drop-menu"></span>Личный кабинет</a></li>
 											<li><a href="#"><span uk-icon="icon: file-edit" class="icon-drop-menu"></span>Моя анкета</a></li>
 											<li><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Оплата услуг</a></li>
 											<li><a href="#"><span uk-icon="icon: pencil" class="icon-drop-menu"></span>Изменить пароль</a></li>
@@ -101,17 +97,30 @@
 	</header>
 	<main class="officer-main">
 		<div class="uk-container">
-			<div class="uk-grid">
-				<aside class="sidebar-left uk-width-1-6">
+			<div class="uk-grid-small"
+			     uk-grid>
+				<aside class="sidebar-left uk-width-1-5">
 					<ul class="uk-nav">
-						<li><a class="active" href="">Студенты</a></li>
-						<li><a href="">Звонки</a></li>
-						<li><a href="">Новости</a></li>
-						<li><a href="">Выход</a></li>
+						<li><a class="active" href="">Проживание</a></li>
+						<li><a href="">Высшее образование</a></li>
+						<li><a href="">Проживание</a></li>
+						<li><a href="">Проживание</a></li>
 					</ul>
+					<div class="blog uk-width-5-6">
+						<p>Популярное в блоге</p>
+						<p><a href="/">Чешская кухня или самая
+						вкусная еда на земле!</a></p>
+						<p>2415 просмотров</p>
+						<p><a href="/">У нас нельзя а чешском
+						языке ЛЬЗЯ?</a></p>
+						<p>5242 просмотра</p>
+						<p><a class="marked-blog" href="/">Какая система обучения
+						в Чехии?</a></p>
+						<p>4523 просмотра</p>
+					</div>
 				</aside>
-				<div class="uk-width-2-3">
-					<form class="uk-form add-news uk-height-medium">
+				<div class="uk-width-3-5 add-news">
+					<form class="uk-form uk-height-medium">
 						<div class="upload-button uk-width-1-1">
 							<label class="uk-position-absolute uk-transform-center btn_transparent" for="file-upload" style="left: 50%; top: 50%">
 								<input type="file" id="file-upload">
@@ -119,52 +128,35 @@
 							</label>
 						</div>
 					</form>
-					<form class="uk-form uk-margin-xlarge-bottom">
+					<form class="uk-form">
 						<div class="input_item_wrap">
 							<label class="block" for="">Название новости</label>
 							<div class="input_item">
 								<input type="text" name="" value="">
 							</div>
 							</div>
-							<div class="input_item_wrap textarea-wrap">
-								<label class="block" for="">Текст новости</label>
-								<div class="inline-block">
-									<div class="display-quant">
-										<button class="uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize cursive" type="button" name="button">к</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize underline" type="button" name="button">П</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize uk-text-bold" type="button" name="button">заголовок</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize cursive" type="button" name="button">Цитата</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize" type="button" name="button">Список</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize" type="button" name="button">Примечание</button>
-									</div>
-									<div class="display-quant">
-										<button class="uk-text-capitalize" type="button" name="button">внимание</button>
-									</div>
+							<div>
+								<label class="block bottom10" for="">Текст новости</label>
+								<div class="display-quant comment-buttons">
+									<button class="square uk-text-capitalize uk-text-bold" type="button" name="button">ж</button>
+									<button class="square uk-text-capitalize cursive" type="button" name="button">к</button>
+									<button class="square uk-text-capitalize underline" type="button" name="button">П</button>
+									<button class="uk-text-capitalize uk-text-bold" type="button" name="button">заголовок</button>
+									<button class="uk-text-capitalize cursive" type="button" name="button">Цитата</button>
+									<button class="uk-text-capitalize" type="button" name="button">Список</button>
+									<button class="uk-text-capitalize" type="button" name="button">Примечание</button>
+									<button class="uk-text-capitalize" type="button" name="button">внимание</button>
 								</div>
-								<div class="input_item">
-									<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
-								</div>
+							</div>
+							<div class="input_item textarea-wrap">
+								<textarea name="name" rows="8" cols="80" placeholder="Введите текст..."></textarea>
 							</div>
 							<div class="input_item">
 								<button class="btn_transparent uk-align-right" type="submit" name="button">Опубликовать</button>
 							</div>
-
 					</form>
 				</div>
-				<div class="back-link uk-width-1-6">
+				<div class="back-link uk-width-1-5">
 					<a href="">
 							<span uk-icon="icon: chevron-left"></span>
 							<span>Назад</span>
@@ -178,32 +170,39 @@
 	<footer>
 		<div class="footer-top">
 			<div class="uk-container">
-				<div class="uk-grid uk-grid-medium">
-					<div class="footer-one uk-width-medium">
+				<div class="uk-grid uk-child-width-1-4">
+					<div>
 						<a class="logo-footer" href="/">
             <img src="img/logo.png" alt="">
           </a>
 						<p>Мы в соцсетях:</p>
+						<div class="socials">
+							<a href=""><img class="icon svg" src="img/facebook-f-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/vk-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/odnoklassniki-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/twitter-brands.svg" alt=""></a>
+							<a href=""><img class="icon svg" src="img/instagram-brands.svg" alt=""></a>
+						</div>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-two">
-							<li class="footer_h">Услуги</li>
-							<li><a href="">Высшее образование в Чехии</a></li>
+					<div>
+						<h3>Услуги</h3>
+						<ul class="uk-nav">
+							<li><a class="svg" href="">Высшее образование в Чехии</a></li>
 							<li><a href="">Курсы чешского языка</a></li>
 							<li><a href="">Онлайн-курс чешского языка</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-three">
-							<li class="footer_h">О компании</li>
+					<div>
+						<h3>О компании</h3>
+						<ul class="uk-nav">
 							<li><a href="">Наша команда</a></li>
 							<li><a href="">Контакты</a></li>
 							<li><a href="">Представительства</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="footer-four uk-nav">
-							<li class="footer_h">Медиатека</li>
+					<div>
+						<h3>Медиатека</h3>
+						<ul class="uk-nav">
 							<li><a href="">Фотографии</a></li>
 							<li><a href="">Видео</a></li>
 							<li><a href="">Наш блог о Чехии</a></li>
@@ -212,7 +211,6 @@
 				</div>
 			</div>
 		</div>
-		<hr>
 		<div class="foot-bottom">
 			<div class="uk-container">
 				<div class="uk-grid">

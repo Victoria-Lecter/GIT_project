@@ -52,17 +52,13 @@
 								<li><a href="/">Образование</a></li>
 								<li><a href="/">Проживание</a></li>
 								<li><a href="/">Медиатека</a></li>
-								<li><a href="/">О нас</a></li>
+								<li class="uk-text-nowrap"><a href="/">О нас</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
-							<div class="uk-width-1-5">
-								<a href="/"uk-tooltip="title: Ответы на частые вопросы; pos: bottom">
-									<img class="icon icon_top svg" src="img/comment.svg" alt="">
-								</a>
-							</div>
+							<div class="uk-width-1-5"><a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom><img class="icon icon_top svg" src="img/comment.svg" alt=""></a></div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
 						</div>
 					</div>
@@ -74,39 +70,62 @@
 				<div class="uk-grid">
 					<div class="uk-width-1-3">
 						<div class="uk-grid contact_info_top">
-							<div><img class="icon svg" src="img/mobile-regular.svg" alt="">+7 (965) 77-253-77</div>
-								<div><img class="icon svg" src="img/envelope-regular.svg" alt="">info@studyinczech.net</div>
-								</div>
-							</div>
-							<div class="uk-width-2-3">
-								<div class="authorization uk-inline uk-align-right">
-									<button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
+							<div>
+								<svg aria-hidden="true" data-prefix="fas" data-icon="mobile-alt" class="svg-inline--fa fa-mobile-alt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
+								+7 (965) 77-253-77</div>
+							<div>
+								<svg aria-hidden="true" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+								info@studyinczech.net</div>
+						</div>
+					</div>
+					<div class="uk-width-2-3">
+						<div class="authorization uk-inline uk-align-right">
+							<button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
 								Данил Яснев<span uk-icon="icon: chevron-down"></span>
 							</button>
-									<div uk-dropdown="pos: bottom-right; offset: 30">
-										<ul class="uk-nav uk-dropdown-nav">
-											<li class="uk-active"><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Личный кабинет</a></li>
-											<li><a href="#"><span uk-icon="icon: file-edit" class="icon-drop-menu"></span>Моя анкета</a></li>
-											<li><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Оплата услуг</a></li>
-											<li><a href="#"><span uk-icon="icon: pencil" class="icon-drop-menu"></span>Изменить пароль</a></li>
-											<li><a href="#"><span uk-icon="icon: sign-out" class="icon-drop-menu"></span>Выйти</a></li>
-										</ul>
-									</div>
-								</div>
+							<div uk-dropdown="pos: bottom-right; offset: 30">
+								<ul class="uk-nav uk-dropdown-nav">
+									<li class="uk-active"><a href="#">
+												<svg aria-hidden="true" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
+												Личный кабинет</a>
+									</li>
+									<li><a href="#">
+												<svg aria-hidden="true" data-prefix="far" data-icon="file-check" class="svg-inline--fa fa-file-check fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.941 97.941l-83.882-83.882A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V131.882a48 48 0 0 0-14.059-33.941zM332.118 128H256V51.882L332.118 128zM48 464V48h160v104c0 13.255 10.745 24 24 24h104v288H48zm261.151-192.661L166.842 412.508c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.7c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.706 4.636 12.303-.069 16.971z"></path></svg>
+												Моя анкета</a>
+									</li>
+									<li><a href="#">
+												<svg aria-hidden="true" data-prefix="far" data-icon="credit-card" class="svg-inline--fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"></path></svg>
+												Оплата услуг</a>
+									</li>
+									<li><a href="#">
+												<svg aria-hidden="true" data-prefix="fas" data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg>
+												Изменить пароль</a>
+									</li>
+									<li><a href="#">
+												<!-- SVG -->
+												Выйти</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		</div>
 	</header>
 	<main class="officer-main">
 		<div class="uk-container">
-			<div class="uk-grid">
-				<aside class="sidebar-left uk-width-1-6">
+			<div class="uk-grid-small"
+			     uk-grid>
+				<aside class="sidebar-left uk-width-1-5">
 					<ul class="uk-nav">
 						<li><a class="active" href="">Проживание</a></li>
+						<li><a href="">Высшее образование</a></li>
+						<li><a href="">Проживание</a></li>
+						<li><a href="">Проживание</a></li>
 					</ul>
-					<div class="blog">
+					<div class="blog uk-width-5-6">
 						<p>Популярное в блоге</p>
 						<p><a href="/">Чешская кухня или самая
 						вкусная еда на земле!</a></p>
@@ -119,79 +138,74 @@
 						<p>4523 просмотра</p>
 					</div>
 				</aside>
-				<div class="uk-width-2-3 ">
-					<div class="padding-bottom">
-						<div class="uk-cover-container uk-inline  dormitory-overlay">
-							<canvas width="775" height="300"></canvas>
+				<div class="uk-width-3-5">
+					<div class="bcg_white">
+						<div class="uk-cover-container uk-inline bcg-for-overlay">
+							<canvas width="800" height="300"></canvas>
 							<img src="img/dormitory.jpg" alt="" uk-cover>
 							<div class="uk-position-bottom uk-overlay uk-text-center uk-padding-remove-bottom">
 								<h2>Общежитие “Young Space”</h2>
-								<div class="image-line uk-child-width-1-5">
-									<img src="img/dormitory.jpg" alt="">
-									<img src="img/dormitory.jpg" alt="">
-									<img src="img/dormitory.jpg" alt="">
-									<img src="img/dormitory.jpg" alt="">
-										</div>
-								</div>
 							</div>
+							<div class="shade-on-image"></div>
 						</div>
-						<div class="accomodation-info">
-							<h3>Общая информация</h3>
-							<p>Это современный жилой комплекс, который находится в 15 минутах ходьбы от центра г. Брно.
-								Неподалеку комплекса находиться трамвайная остановка и большой гипермаркет Алберт. Комплекс
-								прошел целый ряд реконструкций и на сегодняшний день является одним из самых новых студенческих
-								общежитий в г. Брно.</p>
+						<div class="image-line uk-child-width-1-5">
+							<img src="img/dormitory.jpg" alt="">
+							<img src="img/dormitory.jpg" alt="">
+							<img src="img/dormitory.jpg" alt="">
+							<img src="img/dormitory.jpg" alt="">
+						</div>
+							<div class="text-information">
+								<h3>Общая информация</h3>
+								<p>Это современный жилой комплекс, который находится в 15 минутах ходьбы от центра г. Брно.
+									Неподалеку комплекса находиться трамвайная остановка и большой гипермаркет Алберт. Комплекс
+									прошел целый ряд реконструкций и на сегодняшний день является одним из самых новых студенческих
+									общежитий в г. Брно.</p>
 
-							<p>десь есть прачечная с сушкой (стоимость одной стирки составляет 60 крон), высокоскоростной
-								Интернет, летняя терраса для отдыха и гриля, рецепция, тренажёрный зал с акклиматизацией
-								(бесплатно), кофейня, кофейные автоматы, специализированные залы, куда Вы можете позвать своих
-								друзей, чтобы отметить свой День рожденья или провести вечеринку, в здании работает камерная
-								система безопасности, предназначенная для обеспечения порядка и безопасности для жителей
-								комплекса. Проживание возможно в одноместных, двухместных, трехместных номерах, а также
-								отдельных апартаментах — квартирах-студиях.</p>
+								<p>десь есть прачечная с сушкой (стоимость одной стирки составляет 60 крон), высокоскоростной
+									Интернет, летняя терраса для отдыха и гриля, рецепция, тренажёрный зал с акклиматизацией
+									(бесплатно), кофейня, кофейные автоматы, специализированные залы, куда Вы можете позвать своих
+									друзей, чтобы отметить свой День рожденья или провести вечеринку, в здании работает камерная
+									система безопасности, предназначенная для обеспечения порядка и безопасности для жителей
+									комплекса. Проживание возможно в одноместных, двухместных, трехместных номерах, а также
+									отдельных апартаментах — квартирах-студиях.</p>
 
-							<p>Общежитие разделено на несколько блоков. Двухкомнатные блоки соединены общим коридором, имеют
-								общую на две комнаты ванную и туалет. Таким образом, один блок рассчитан на двух или четверых
-								человек, в каждой комнате проживает по 1 или 2 человека. Кухня общая на 3-4 блока. Комнаты
-								полностью меблированы (есть рабочий стол с лампой, стул, кровать, шкаф, комод, есть также подушка с
-								одеялом и постельное белье, которое можно менять раз в 2 недели абсолютно бесплатно).</p>
+								<p>Общежитие разделено на несколько блоков. Двухкомнатные блоки соединены общим коридором, имеют
+									общую на две комнаты ванную и туалет. Таким образом, один блок рассчитан на двух или четверых
+									человек, в каждой комнате проживает по 1 или 2 человека. Кухня общая на 3-4 блока. Комнаты
+									полностью меблированы (есть рабочий стол с лампой, стул, кровать, шкаф, комод, есть также подушка с
+									одеялом и постельное белье, которое можно менять раз в 2 недели абсолютно бесплатно).</p>
 
-							<p>Уборку в комнатах проводят сами студены, при необходимости на рецепции можно взять пылесос,
-								швабру, веник исовок. Можно также за отделанную плату воспользоваться услугами уборщицы.</p>
+								<p>Уборку в комнатах проводят сами студены, при необходимости на рецепции можно взять пылесос,
+									швабру, веник исовок. Можно также за отделанную плату воспользоваться услугами уборщицы.</p>
 
-							<p>Студенческий комплекс «Young Space» расположен на улице Цейл (Сejl 97), что, пожалуй, и является
-								его главным минусом, так как в данном районе проживает немаленькое количество как чехов, так ромов
-								или как мы их привыкли называть «цыган». Этот факт пугает довольно многих, однако, стоит иметь в
-								виду, что это не те «цыгане», которых мы привыкли видеть дома, эти люди живут здесь уже долгое
-								время, ходят на работу и не представляют для Вас угрозы. Однако, если этот аспект Вас все-таки
-								смущает, то существует еще множество других общежитий, заслуживающих Вашего внимания.</p>
-							<h3>Стоимость</h3>
-							<ul>
-								<li>
-									3 300 крон или 122 € за место в трехместном номере
-									<p>+ однократный возвратный залог 3 300 крон или 122 €</p>
-								</li>
-							</ul>
-							<div class="uk uk-align-right accomodation-bottom">
+								<p>Студенческий комплекс «Young Space» расположен на улице Цейл (Сejl 97), что, пожалуй, и является
+									его главным минусом, так как в данном районе проживает немаленькое количество как чехов, так ромов
+									или как мы их привыкли называть «цыган». Этот факт пугает довольно многих, однако, стоит иметь в
+									виду, что это не те «цыгане», которых мы привыкли видеть дома, эти люди живут здесь уже долгое
+									время, ходят на работу и не представляют для Вас угрозы. Однако, если этот аспект Вас все-таки
+									смущает, то существует еще множество других общежитий, заслуживающих Вашего внимания.</p>
+								<h3 class="uk-margin-remove">Стоимость</h3>
+								<ul class="list uk-margin-remove">
+									<li>
+										<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
+										<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
+									</li>
+									<li>
+										<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
+										<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
+									</li>
+								</ul>
+
+							</div>
+							<div class="uk-text-right bottom-border-top">
 								<p>
 									<a href="#">Задать вопрос</a> или
-									<button class="button accent_button" type="button" name="button">Заполнить анкету</button></p>
+									<button class="button accent_button" type="button" name="button">Заполнить анкету</button>
+								</p>
 							</div>
 						</div>
-
-
-						<!-- <img class="dormitory-background" src="img/dormitory.jpg" alt="">
-						<div class="image-overlay">
-							<h2>Общежитие “Young Space”</h2>
-							<div class="image-line uk-child-width-1-4">
-								<img src="img/dormitory.jpg" alt="">
-								<img src="img/dormitory.jpg" alt="">
-								<img src="img/dormitory.jpg" alt="">
-								<img src="img/dormitory.jpg" alt="">
-									</div>
-							</div> -->
 					</div>
-					<div class="back-link uk-width-1-6">
+					<div class="back-link uk-width-1-5">
 						<a href="">
 								<span uk-icon="icon: chevron-left"></span>
 								<span>Назад</span>
@@ -200,38 +214,54 @@
 				</div>
 			</div>
 		</div>
-		</div>
 	</main>
 
 	<footer>
 		<div class="footer-top">
 			<div class="uk-container">
-				<div class="uk-grid uk-grid-medium">
-					<div class="footer-one uk-width-medium">
+				<div class="uk-grid uk-child-width-1-4">
+					<div>
 						<a class="logo-footer" href="/">
             <img src="img/logo.png" alt="">
           </a>
 						<p>Мы в соцсетях:</p>
+						<div class="socials">
+							<a href="">
+								<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+							</a>
+							<a href="">
+								<svg aria-hidden="true" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+							</a>
+							<a href="">
+								<svg aria-hidden="true" data-prefix="fab" data-icon="odnoklassniki" class="svg-inline--fa fa-odnoklassniki fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M275.1 334c-27.4 17.4-65.1 24.3-90 26.9l20.9 20.6 76.3 76.3c27.9 28.6-17.5 73.3-45.7 45.7-19.1-19.4-47.1-47.4-76.3-76.6L84 503.4c-28.2 27.5-73.6-17.6-45.4-45.7 19.4-19.4 47.1-47.4 76.3-76.3l20.6-20.6c-24.6-2.6-62.9-9.1-90.6-26.9-32.6-21-46.9-33.3-34.3-59 7.4-14.6 27.7-26.9 54.6-5.7 0 0 36.3 28.9 94.9 28.9s94.9-28.9 94.9-28.9c26.9-21.1 47.1-8.9 54.6 5.7 12.4 25.7-1.9 38-34.5 59.1zM30.3 129.7C30.3 58 88.6 0 160 0s129.7 58 129.7 129.7c0 71.4-58.3 129.4-129.7 129.4s-129.7-58-129.7-129.4zm66 0c0 35.1 28.6 63.7 63.7 63.7s63.7-28.6 63.7-63.7c0-35.4-28.6-64-63.7-64s-63.7 28.6-63.7 64z"></path></svg>
+							</a>
+							<a href="">
+								<svg aria-hidden="true" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+							</a>
+							<a href="">
+								<svg aria-hidden="true" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+							</a>
+						</div>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-two">
-							<li class="footer_h">Услуги</li>
-							<li><a href="">Высшее образование в Чехии</a></li>
+					<div>
+						<h3>Услуги</h3>
+						<ul class="uk-nav">
+							<li><a class="svg" href="">Высшее образование в Чехии</a></li>
 							<li><a href="">Курсы чешского языка</a></li>
 							<li><a href="">Онлайн-курс чешского языка</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="uk-nav footer-three">
-							<li class="footer_h">О компании</li>
+					<div>
+						<h3>О компании</h3>
+						<ul class="uk-nav">
 							<li><a href="">Наша команда</a></li>
 							<li><a href="">Контакты</a></li>
 							<li><a href="">Представительства</a></li>
 						</ul>
 					</div>
-					<div class="uk-width-medium">
-						<ul class="footer-four uk-nav">
-							<li class="footer_h">Медиатека</li>
+					<div>
+						<h3>Медиатека</h3>
+						<ul class="uk-nav">
 							<li><a href="">Фотографии</a></li>
 							<li><a href="">Видео</a></li>
 							<li><a href="">Наш блог о Чехии</a></li>
@@ -240,7 +270,6 @@
 				</div>
 			</div>
 		</div>
-		<hr>
 		<div class="foot-bottom">
 			<div class="uk-container">
 				<div class="uk-grid">

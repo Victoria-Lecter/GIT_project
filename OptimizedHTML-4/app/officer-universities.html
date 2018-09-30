@@ -52,7 +52,7 @@
 								<li><a href="/">Образование</a></li>
 								<li><a href="/">Проживание</a></li>
 								<li><a href="/">Медиатека</a></li>
-								<li><a href="/">О нас</a></li>
+								<li class="uk-text-nowrap"><a href="/">О нас</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -97,16 +97,29 @@
 	</header>
 	<main class="officer-main">
 		<div class="uk-container">
-			<div class="uk-grid">
-				<aside class="sidebar-left uk-width-1-6">
+			<div class="uk-grid-small"
+			     uk-grid>
+				<aside class="sidebar-left uk-width-1-5">
 					<ul class="uk-nav">
-						<li><a class="active" href="">Студенты</a></li>
-						<li><a href="">Звонки</a></li>
-						<li><a href="">Новости</a></li>
-						<li><a href="">Выход</a></li>
+						<li><a class="active" href="">Проживание</a></li>
+						<li><a href="">Высшее образование</a></li>
+						<li><a href="">Проживание</a></li>
+						<li><a href="">Проживание</a></li>
 					</ul>
+					<div class="blog uk-width-5-6">
+						<p>Популярное в блоге</p>
+						<p><a href="/">Чешская кухня или самая
+						вкусная еда на земле!</a></p>
+						<p>2415 просмотров</p>
+						<p><a href="/">У нас нельзя а чешском
+						языке ЛЬЗЯ?</a></p>
+						<p>5242 просмотра</p>
+						<p><a class="marked-blog" href="/">Какая система обучения
+						в Чехии?</a></p>
+						<p>4523 просмотра</p>
+					</div>
 				</aside>
-				<div class="uk-width-5-6 officer-middle">
+				<div class="uk-width-4-5 officer-middle">
 					<div uk-grid
 					     class="">
 						<div class="uk-width-1-6 uk-inline display-quant display-num">
@@ -125,40 +138,40 @@
 									<td class="uk-width-1-6">Брно</td>
 									<td class="uk-text-bold">Технический университет</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="pencil"></a>
+										<a href=""><img class="icon svg" src="img/pencil-alt-solid.svg" alt=""></a>
 									</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
-									</td>
-								</tr>
-								<tr>
-									<td class="uk-width-1-6">Брно</td>
-									<td class="uk-text-bold">Технический университет</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="pencil"></a>
-									</td>
-									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
+										<a href=""><img class="icon svg" src="img/trash-alt-regular.svg" alt=""></a>
 									</td>
 								</tr>
 								<tr>
 									<td class="uk-width-1-6">Брно</td>
 									<td class="uk-text-bold">Технический университет</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="pencil"></a>
+										<a href=""><svg aria-hidden="true" data-prefix="fas" data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg></a>
 									</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
+										<a href=""><svg aria-hidden="true" data-prefix="far" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"></path></svg></a>
 									</td>
 								</tr>
 								<tr>
 									<td class="uk-width-1-6">Брно</td>
 									<td class="uk-text-bold">Технический университет</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="pencil"></a>
+										<a href=""><svg aria-hidden="true" data-prefix="fas" data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg></a>
 									</td>
 									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
-										<a href="" class="uk-icon-link" uk-icon="trash"></a>
+										<a href=""><svg aria-hidden="true" data-prefix="far" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"></path></svg></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="uk-width-1-6">Брно</td>
+									<td class="uk-text-bold">Технический университет</td>
+									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
+										<a href=""><svg aria-hidden="true" data-prefix="fas" data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg></a>
+									</td>
+									<td class="uk-text-middle uk-table-shrink uk-preserve-width">
+										<a href=""><svg aria-hidden="true" data-prefix="far" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z"></path></svg></a>
 									</td>
 								</tr>
 							</tbody>
