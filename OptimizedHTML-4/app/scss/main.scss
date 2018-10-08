@@ -68,13 +68,31 @@ b, strong {
 
 header {
 	background-color: white;
-	.svg {
+	svg {
 		path {
 			fill: $accent2;
 		}
 	}
+	a[uk-tooltip] {
+		svg {
+			margin-left: 5px;
+		}
+	}
+	.uk-breadcrumb {
+		position: absolute;
+		top: 0;
+		left: 0;
+		a {
+			color: #3c71bc;
+		}
+	}
+	.uk-breadcrumb>:last-child>* {
+		color: #3c71bc;
+	}
+
 }
-header .uk-navbar-nav li a:hover {
+header .uk-navb
+colorar-nav li a:hover {
 	color: $accent2;
 }
 svg {
@@ -91,11 +109,7 @@ svg {
 	padding: 15px 0;
 	border-top: 1px solid #e5e5e5;
 	.contact_info_top {
-		svg {
-			path {
-				fill: $accent2;
-			}
-		}
+
 	}
 }
 .logo-header img {
@@ -1600,18 +1614,6 @@ label {
 	z-index: 100;
 	text-align: center;
 	font-size: 0;
-	.uk-overlay-default {
-		position: relative;
-	}
-	img {
-		border: 5px solid white;
-		border-left: none;
-		height: 120px;
-		object-fit: cover;
-		&:first-child {
-			border-left: 5px solid white;
-		}
-	}
 }
 .bcg_white{
 	background-color: #fff;
@@ -1647,10 +1649,23 @@ label {
 		z-index: 100;
 		color: black;
 		padding-top: 45px;
+		font-size: 12px;
+		font-weight: bold;
+		&:hover {
+			text-decoration: none;
+			background-color: rgba(white, .7);
+		}
+	}
+	&:first-of-type img {
+		border-left: 5px solid white;
 	}
 	img{
 		position: relative;
 		z-index: 99;
+		border: 5px solid white;
+		border-left: none;
+		height: 120px;
+		object-fit: cover;
 	}
 }
 
