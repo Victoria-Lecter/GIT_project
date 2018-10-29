@@ -75,20 +75,10 @@
 								</div>
 							</div>
 							<div class="uk-width-2-3">
-								<div class="authorization uk-inline uk-align-right">
-									<button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
-								Данил Яснев<span uk-icon="icon: chevron-down"></span>
-							</button>
-									<div uk-dropdown="pos: bottom-right; offset: 30">
-										<ul class="uk-nav uk-dropdown-nav">
-											<li class="uk-active"><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Личный кабинет</a></li>
-											<li><a href="#"><span uk-icon="icon: file-edit" class="icon-drop-menu"></span>Моя анкета</a></li>
-											<li><a href="#"><span uk-icon="icon: credit-card" class="icon-drop-menu"></span>Оплата услуг</a></li>
-											<li><a href="#"><span uk-icon="icon: pencil" class="icon-drop-menu"></span>Изменить пароль</a></li>
-											<li><a href="#"><span uk-icon="icon: sign-out" class="icon-drop-menu"></span>Выйти</a></li>
-										</ul>
+								<div class="authorithation uk-text-right">
+									<div class="user">
+										<a href="/">Данил Яснев</a>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -96,96 +86,103 @@
 				</div>
 			</div>
 	</header>
-	<main class="student-main">
+
+	<main class="officer-main">
 		<div class="uk-container">
-			<aside class="student-left">
-				<ul class="uk-nav">
-					<li><a href="">Личный кабинет</a></li>
-					<li><a class="active" href="">Моя анкета</a></li>
-					<li><a href="">Оплата услуг</a></li>
-					<li><a href="">Выход</a></li>
-				</ul>
-				<div class="blog">
-					<p>Популярное в блоге</p>
-					<p><a href="/">Чешская кухня или самая
-					вкусная еда на земле!</a></p>
-					<p>2415 просмотров</p>
-					<p><a href="/">У нас нельзя а чешском
-					языке ЛЬЗЯ?</a></p>
-					<p>5242 просмотра</p>
-					<p><a class="marked-blog" href="/">Какая система обучения
-					в Чехии?</a></p>
-					<p>4523 просмотра</p>
-				</div>
-			</aside>
-			<aside class="student-right">
-				<div class="menu_right_sidebar">
-					<ul>
-						<li><a href="/">1. Персональные данные</a></li>
-						<li><a class="active" href="/">2. Заграничный паспорт</a></li>
-						<li><a href="/">3. Персональные данные</a></li>
-						<li><a href="/">4. Персональные данные</a></li>
-						<li><a href="/">5. Персональные данные</a></li>
-						<li><a href="/">6. Персональные данные</a></li>
+			<div class="uk-grid-small"
+			     uk-grid>
+				<aside class="sidebar-left uk-width-1-5">
+					<ul class="uk-nav">
+						<li><a href="">Проживание</a></li>
+						<li><a class="active uk-disabled" href="">Высшее образование</a></li>
+						<li><a href="">Проживание</a></li>
+						<li><a href="">Проживание</a></li>
 					</ul>
-				</div>
-				<div class="student-right-block-2">
-					<p><span>Возникли затруднения?</span></p>
-					<p class="uk-margin-large-right"><a href="/">Напишите нам</a> и мы
-						проконсультируем Вас
-						по любому вопросу.</p>
-				</div>
-			</aside>
-			<div class="student-middle-1">
-				<div class="form_wrap">
-					<form action="">
-						<div class="input_item_wrap">
-							<label class="prefix_input" for="">Дата приезда:</label>
-							<div class="input_item">
-								<select name="" id="">
-						<option value="">Не выбрано</option>
-					</select>
-							</div>
-						</div>
-						<div class="input_item_wrap">
-							<label class="prefix_input" for="">Время приезда:</label>
-							<div class="input_item">
-								<input type="text">
-						</div>
-							</div>
-							<div class="input_item_wrap">
-								<label class="prefix_input" for="">Дата приезда:</label>
-								<div class="input_item">
-									<select name="" id="">
-							<option value="">Не выбрано</option>
-						</select>
-								</div>
-							</div>
-							<div class="input_item_wrap">
-								<label class="prefix_input" for="">Дата приезда:</label>
-								<div class="input_item">
-									<select name="" id="">
-							<option value="">Не выбрано</option>
-						</select>
-								</div>
-							</div>
-							<div class="input_item_wrap">
-								<label class="prefix_input" for="">адрес:</label>
-								<div class="input_item">
-									<input type="text">
-							</div>
+					<div class="blog">
+						<p>Популярное в блоге</p>
+						<p><a href="/">Чешская кухня или самая
+						вкусная еда на земле!</a></p>
+						<p>2415 просмотров</p>
+						<p><a href="/">У нас нельзя а чешском
+						языке ЛЬЗЯ?</a></p>
+						<p>5242 просмотра</p>
+						<p><a class="marked-blog" href="/">Какая система обучения
+						в Чехии?</a></p>
+						<p>4523 просмотра</p>
+					</div>
+				</aside>
+				<div class="uk-width-expand">
+					<div class="bcg_white">
+						<div class="form_wrap">
+							<form action="">
+								<div class="input_item_wrap">
+									<label class="prefix_input" for="">Дата приезда:</label>
+									<div class="input_item">
+										<select name="" id="">
+								<option value="">Не выбрано</option>
+							</select>
+									</div>
 								</div>
 								<div class="input_item_wrap">
-									<label class="prefix_input" for="">Название авиакомпании:</label>
+									<label class="prefix_input" for="">Время приезда:</label>
 									<div class="input_item">
 										<input type="text">
+								</div>
 									</div>
+									<div class="input_item_wrap">
+										<label class="prefix_input" for="">Дата приезда:</label>
+										<div class="input_item">
+											<select name="" id="">
+									<option value="">Не выбрано</option>
+								</select>
+										</div>
 									</div>
+									<div class="input_item_wrap">
+										<label class="prefix_input" for="">Дата приезда:</label>
+										<div class="input_item">
+											<select name="" id="">
+									<option value="">Не выбрано</option>
+								</select>
+										</div>
+									</div>
+									<div class="input_item_wrap">
+										<label class="prefix_input" for="">адрес:</label>
+										<div class="input_item">
+											<input type="text">
+									</div>
+										</div>
+										<div class="input_item_wrap">
+											<label class="prefix_input" for="">Название авиакомпании:</label>
+											<div class="input_item">
+												<input type="text">
+											</div>
+											</div>
 
-					</form>
+							</form>
+						</div>
+						<div class="form-bottom">
+							<button class="btn_transparent" type="submit" name="save">Сохранить</button>
+						</div>
+					</div>
 				</div>
-				<div class="form-bottom">
-					<button class="btn_transparent" type="submit" name="save">Сохранить</button>
+
+				<div class="uk-width-medium">
+					<div class="menu_right_sidebar">
+						<ul>
+							<li><a class="active uk-disabled" href="/">1. Персональные данные</a></li>
+							<li><a href="/">2. Заграничный паспорт</a></li>
+							<li><a href="/">3. Персональные данные</a></li>
+							<li><a href="/">4. Персональные данные</a></li>
+							<li><a href="/">5. Персональные данные</a></li>
+							<li><a href="/">6. Персональные данные</a></li>
+						</ul>
+					</div>
+					<div class="problem">
+						<h2>Возникли затруднения?</h2>
+						<p><a href="/">Напишите нам</a> и мы
+							проконсультируем Вас
+							по любому вопросу.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -228,18 +225,17 @@
 				</div>
 			</div>
 		</div>
-		<hr>
 		<div class="foot-bottom">
 			<div class="uk-container">
 				<div class="uk-grid">
 					<div class="uk-width-1-2">
-						<p>© 2016 Все права защищены. Сайт сделан в студии <a><img src="img/autor_logo.png" alt=""></a></p>
+						<p>© 2016 Все права защищены. Сайт сделан в студии <a><img class="autor_logo" src="img/autor_logo.png" alt=""></a></p>
 					</div>
 					<div class="uk-width-1-2">
 						<div class="uk-align-right">
-							<img class="uk-margin-left" src="img/visa.png" alt="">
-							<img class="uk-margin-left" src="img/maestro.png" alt="">
-							<img class="uk-margin-left" src="img/mastercard.png" alt="">
+							<img class="foot-icon" src="img/visa.png" alt="">
+							<img class="foot-icon" src="img/maestro.png" alt="">
+							<img class="foot-icon" src="img/mastercard.png" alt="">
 						</div>
 						</div>
 					</div>

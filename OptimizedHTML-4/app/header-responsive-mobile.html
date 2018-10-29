@@ -40,12 +40,33 @@
 		<div class="header_top">
 			<div class="uk-container">
 				<div class="uk-grid uk-grid-small">
-					<div class="uk-width-1-5">
+					<div class="uk-width-1-5@s uk-width-1-4">
 						<a class="logo-header" href="/">
  							<img src="img/logo.png" alt="">
  						</a>
 					</div>
-					<div class="uk-width-3-5">
+					<div class="uk-width-3-4 uk-hidden@s">
+						<button href="#offcanvas-slide" class="uk-align-right hamburger" uk-toggle>
+							<svg aria-hidden="true" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+						</button>
+
+						<div id="offcanvas-slide"
+						     uk-offcanvas="flip: true">
+							<div class="uk-offcanvas-bar">
+								<ul class="uk-nav uk-nav-default">
+									<li class="uk-active"><a href="#">Active</a></li>
+									<li><a href="#">Item</a></li>
+									<li class="uk-nav-header">Header</li>
+									<li><a href="#">Item</a></li>
+									<li><a href="#">Item</a></li>
+									<li class="uk-nav-divider"></li>
+									<li><a href="#">Item</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-3-5@s uk-visible@s">
 						<nav class="uk-navbar uk-align-right">
 							<ul class="uk-navbar-nav">
 								<li><a href="/">Главная</a></li>
@@ -56,11 +77,11 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="uk-width-1-5">
+					<div class="uk-width-1-5@s uk-visible@s">
 						<div class="uk-grid uk-grid-small header_top_a">
 							<div class="uk-width-1-5">
 								<a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom>
-								<svg class="uk-margin-small-top" aria-hidden="true" data-prefix="far" data-icon="comment-alt-exclamation" class="svg-inline--fa fa-comment-alt-exclamation fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zM448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288zM284.7 96h-57.4c-10 0-17.6 9.1-15.7 18.9l18 96c1.4 7.6 8 13.1 15.7 13.1h21.4c7.7 0 14.3-5.5 15.7-13.1l18-96c1.9-9.8-5.7-18.9-15.7-18.9z"></path></svg>
+								<svg style="min-width: 21px" class="uk-margin-small-top" aria-hidden="true" data-prefix="far" data-icon="comment-alt-exclamation" class="svg-inline--fa fa-comment-alt-exclamation fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zM448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288zM284.7 96h-57.4c-10 0-17.6 9.1-15.7 18.9l18 96c1.4 7.6 8 13.1 15.7 13.1h21.4c7.7 0 14.3-5.5 15.7-13.1l18-96c1.9-9.8-5.7-18.9-15.7-18.9z"></path></svg>
 							</a>
 							</div>
 							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
@@ -69,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="header_bottom">
+		<div class="header_bottom uk-visible@s">
 			<div class="uk-container">
 				<div class="uk-grid">
 					<div class="uk-width-1-3">
@@ -107,6 +128,7 @@
 											</div>
 											<button class="uk-button" type="submit" name="button">Авторизоваться</button>
 									</form>
+
 								</div>
 								<!-- <button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
 								Данил Яснев<span uk-icon="icon: chevron-down"></span>
@@ -142,131 +164,19 @@
 			</div>
 		</div>
 	</header>
-	<main class="officer-main">
-		<div class="uk-container">
-			<div class="uk-grid-small"
-			     uk-grid>
-				<aside class="sidebar-left uk-width-1-5">
-					<ul class="uk-nav">
-						<li><a class="active" href="">Проживание</a></li>
-						<li><a href="">Высшее образование</a></li>
-						<li><a href="">Проживание</a></li>
-						<li><a href="">Проживание</a></li>
-					</ul>
-					<div class="blog uk-width-5-6">
-						<p>Популярное в блоге</p>
-						<p><a href="/">Чешская кухня или самая
-						вкусная еда на земле!</a></p>
-						<p>2415 просмотров</p>
-						<p><a href="/">У нас нельзя а чешском
-						языке ЛЬЗЯ?</a></p>
-						<p>5242 просмотра</p>
-						<p><a class="marked-blog" href="/">Какая система обучения
-						в Чехии?</a></p>
-						<p>4523 просмотра</p>
-					</div>
-				</aside>
-				<div class="uk-width-3-5">
-					<div class="bcg_white">
-						<div class="uk-cover-container uk-inline bcg-for-overlay">
-							<canvas width="800" height="300"></canvas>
-							<img src="img/dormitory.jpg" alt="" uk-cover>
-							<div class="uk-position-bottom uk-overlay uk-text-center uk-padding-remove-bottom">
-								<h2>Общежитие “Young Space”</h2>
-							</div>
-							<div class="shade-on-image"></div>
-						</div>
-						<div class="image-line uk-child-width-1-5">
-							<div class="galery_img">
-								<img src="img/dormitory.jpg" alt="">
-							</div>
-								<div class="galery_img">
-									<img src="img/dormitory.jpg" alt="">
-							</div>
-									<div class="galery_img">
-										<img src="img/dormitory.jpg" alt="">
-							</div>
-										<div class="galery_img">
-											<img src="img/dormitory.jpg" alt="">
-											<a href="#">
-												<svg aria-hidden="true" data-prefix="far" data-icon="camera" class="svg-inline--fa fa-camera fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M342.7 144H464v288H48V144h121.3l24-64h125.5l23.9 64zM324.3 32h-131c-20 0-37.9 12.4-44.9 31.1L136 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48h-88l-14.3-38c-5.8-15.7-20.7-26-37.4-26zM256 408c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-192c-39.7 0-72 32.3-72 72s32.3 72 72 72 72-32.3 72-72-32.3-72-72-72z"></path></svg>
-												<br>
-												Все фотографии
-											</a>
-										</div>
-									</div>
-									<div class="text-information">
-										<h3>Общая информация</h3>
-										<p>Это современный жилой комплекс, который находится в 15 минутах ходьбы от центра г. Брно.
-											Неподалеку комплекса находиться трамвайная остановка и большой гипермаркет Алберт. Комплекс
-											прошел целый ряд реконструкций и на сегодняшний день является одним из самых новых студенческих
-											общежитий в г. Брно.</p>
-
-										<p>Здесь есть прачечная с сушкой (стоимость одной стирки составляет 60 крон), высокоскоростной
-											Интернет, летняя терраса для отдыха и гриля, рецепция, тренажёрный зал с акклиматизацией
-											(бесплатно), кофейня, кофейные автоматы, специализированные залы, куда Вы можете позвать своих
-											друзей, чтобы отметить свой День рожденья или провести вечеринку, в здании работает камерная
-											система безопасности, предназначенная для обеспечения порядка и безопасности для жителей
-											комплекса. Проживание возможно в одноместных, двухместных, трехместных номерах, а также
-											отдельных апартаментах — квартирах-студиях.</p>
-
-										<p>Общежитие разделено на несколько блоков. Двухкомнатные блоки соединены общим коридором, имеют
-											общую на две комнаты ванную и туалет. Таким образом, один блок рассчитан на двух или четверых
-											человек, в каждой комнате проживает по 1 или 2 человека. Кухня общая на 3-4 блока. Комнаты
-											полностью меблированы (есть рабочий стол с лампой, стул, кровать, шкаф, комод, есть также подушка с
-											одеялом и постельное белье, которое можно менять раз в 2 недели абсолютно бесплатно).</p>
-
-										<p>Уборку в комнатах проводят сами студены, при необходимости на рецепции можно взять пылесос,
-											швабру, веник исовок. Можно также за отделанную плату воспользоваться услугами уборщицы.</p>
-
-										<p>Студенческий комплекс «Young Space» расположен на улице Цейл (Сejl 97), что, пожалуй, и является
-											его главным минусом, так как в данном районе проживает немаленькое количество как чехов, так ромов
-											или как мы их привыкли называть «цыган». Этот факт пугает довольно многих, однако, стоит иметь в
-											виду, что это не те «цыгане», которых мы привыкли видеть дома, эти люди живут здесь уже долгое
-											время, ходят на работу и не представляют для Вас угрозы. Однако, если этот аспект Вас все-таки
-											смущает, то существует еще множество других общежитий, заслуживающих Вашего внимания.</p>
-										<h3 class="uk-margin-remove">Стоимость</h3>
-										<ul class="list uk-margin-remove">
-											<li>
-												<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
-												<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
-											</li>
-											<li>
-												<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
-												<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
-											</li>
-										</ul>
-
-									</div>
-									<div class="uk-text-right bottom-border-top">
-										<p>
-											<a href="#">Задать вопрос</a> или
-											<button class="button accent_button" type="button" name="button">Заполнить анкету</button>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="back-link uk-width-1-5">
-								<a href="">
-								<span uk-icon="icon: chevron-left"></span>
-								<span>Назад</span>
-							</a>
-							</div>
-						</div>
-					</div>
-				</div>
-	</main>
-
 	<footer>
 		<div class="footer-top">
 			<div class="uk-container">
-				<div class="uk-grid uk-child-width-1-4">
-					<div>
-						<a class="logo-footer" href="/">
-            <img src="img/logo.png" alt="">
-          </a>
-						<p>Мы в соцсетях:</p>
+				<div class="uk-grid">
+					<div class="uk-width-1-4@s uk-text-center uk-text-left@s">
+						<div>
+							<a class="logo-footer uk-visible@s" href="/">
+								<img src="img/logo.png" alt="">
+							</a>
+						</div>
+
 						<div class="socials">
+							<p>Мы в соцсетях:</p>
 							<a href="">
 								<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
 							</a>
@@ -284,7 +194,7 @@
 							</a>
 						</div>
 					</div>
-					<div>
+					<div class="uk-width-1-4@s uk-visible@s">
 						<h3>Услуги</h3>
 						<ul class="uk-nav">
 							<li><a class="svg" href="">Высшее образование в Чехии</a></li>
@@ -292,7 +202,7 @@
 							<li><a href="">Онлайн-курс чешского языка</a></li>
 						</ul>
 					</div>
-					<div>
+					<div class="uk-width-1-4@s uk-visible@s">
 						<h3>О компании</h3>
 						<ul class="uk-nav">
 							<li><a href="">Наша команда</a></li>
@@ -300,7 +210,7 @@
 							<li><a href="">Представительства</a></li>
 						</ul>
 					</div>
-					<div>
+					<div class="uk-width-1-4@s uk-visible@s">
 						<h3>Медиатека</h3>
 						<ul class="uk-nav">
 							<li><a href="">Фотографии</a></li>
@@ -314,10 +224,10 @@
 		<div class="foot-bottom">
 			<div class="uk-container">
 				<div class="uk-grid">
-					<div class="uk-width-1-2">
-						<p>© 2016 Все права защищены. Сайт сделан в студии <a><img src="img/autor_logo.png" alt=""></a></p>
+					<div class="uk-width-1-2@s">
+						<p class="uk-text-center uk-text-left@s">© 2016 Все права защищены. <span class="mobile-vers">Сайт сделан в студии<a><img src="img/autor_logo.png" alt=""></a></span> </p>
 					</div>
-					<div class="uk-width-1-2">
+					<div class="uk-width-1-2@s uk-visible@s">
 						<div class="uk-align-right">
 							<img class="uk-margin-left" src="img/visa.png" alt="">
 							<img class="uk-margin-left" src="img/maestro.png" alt="">
@@ -328,5 +238,6 @@
 				</div>
 			</div>
 	</footer>
+
 	<script src="/js/scripts.min.js"></script>
 </body>

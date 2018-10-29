@@ -59,65 +59,181 @@
 					<div class="uk-width-1-5">
 						<div class="uk-grid uk-grid-small header_top_a">
 							<div class="uk-width-1-5">
-								<a href="/" title="Ответы на частые вопросы" uk-tooltip pos: bottom>
+								<a class="tooltip" href="/">
+								<span class="tooltiptext">Ответы на частые вопросы</span>
 								<svg class="uk-margin-small-top" aria-hidden="true" data-prefix="far" data-icon="comment-alt-exclamation" class="svg-inline--fa fa-comment-alt-exclamation fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zM448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288zM284.7 96h-57.4c-10 0-17.6 9.1-15.7 18.9l18 96c1.4 7.6 8 13.1 15.7 13.1h21.4c7.7 0 14.3-5.5 15.7-13.1l18-96c1.9-9.8-5.7-18.9-15.7-18.9z"></path></svg>
 							</a>
 							</div>
-							<div class="uk-width-4-5"><button class="button accent_button"><a href="/">Заполнить анкету</a></button></div>
+							<div class="uk-width-4-5"><button class="button accent_button" uk-toggle="target: #registration"><a href="/">Заполнить анкету</a></button></div>
+
+							<div id="registration"
+							     class="uk-modal-full"
+							     uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-full" type="button" uk-close></button>
+									<div uk-height-viewport>
+
+										<div class="uk-modal-body">
+											<form class="registration-form uk-margin-medium-top"
+											      action="index.html"
+											      method="post">
+												<fieldset class="uk-fieldset uk-margin-large-bottom">
+													<legend class="uk-legend uk-text-center uk-margin-large-bottom ">Персональная информация
+													</legend>
+													<div class="uk-child-width-1-2"
+													     uk-grid>
+														<div>
+															<div class="uk-align-right">
+																<div class="uk-margin-bottom">
+																	<label class="" for="">Имя:</label>
+																	<div class="uk-margin-small-top">
+																		<input class="uk-input uk-form-width-medium uk-form-small" type="text" placeholder="Имя">
+												 						</div>
+																	</div>
+																	<div class="uk-margin-bottom">
+																		<label for="">Дата рождения:</label>
+																		<div class="uk-margin-small-top uk-flex date">
+																			<input class="uk-input uk-form-width-xsmall uk-form-small" type="text" placeholder="5">
+																			<select class="uk-select uk-form-width-small uk-form-small" name="" id="">
+																		<option value="">Январь</option>
+																	</select>
+																			<input class="uk-input uk-form-width-xsmall uk-form-small" type="text" placeholder="1999">
+													 						</div>
+																		</div>
+																		<div class="uk-margin-bottom">
+																			<label class="" for="">Страна:</label>
+																			<div class="uk-margin-small-top">
+																				<select class="uk-select uk-form-width-medium uk-form-small" name="" id="">
+																			<option value="">Россия</option>
+																		</select>
+																			</div>
+																		</div>
+																		<div class="uk-margin-bottom">
+																			<label class="" for="">E-mail:</label>
+																			<div class="uk-margin-small-top">
+																				<input class="uk-input uk-form-width-medium uk-form-small" type="email">
+																				<!-- <div uk-drop="pos: left-center">
+																					<div class="uk-card uk-card-body uk-card-default">
+																						<p>На эту почту мы вышлем
+																							Вам письмо, которое будет
+																							содержать логин и пароль
+																							для личного кабинета.</p>
+																					</div>
+																				</div> -->
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div>
+																	<div class="uk-align-left">
+																		<div class="uk-margin-bottom">
+																			<label for="">Фамилия:</label>
+																			<div class="uk-margin-small-top">
+																				<input class="uk-input uk-form-width-medium uk-form-small" type="text" placeholder="Имя">
+															 						</div>
+																			</div>
+																			<div class="uk-margin-bottom">
+																				<label for="">Пол:</label>
+																				<div class="uk-margin-small-top uk-flex">
+																					<input id="male" name="gender" type="radio">
+																					<label class="gender" for="male" for="">Мужской</label>
+																					<input id="female" name="gender" type="radio">
+																					<label class="gender" for="female" for="">Женский</label>
+																				</div>
+																			</div>
+																			<div class="uk-margin-bottom">
+																				<label for="">Город:</label>
+																				<div class="uk-margin-small-top">
+																					<input class="uk-input uk-form-width-medium uk-form-small" type="text" placeholder="Москва">
+																 						</div>
+																				</div>
+																				<div class="uk-margin-bottom">
+																					<label for="">Телефон:</label>
+																					<div class="uk-margin-small-top">
+																						<input class="uk-input uk-form-width-medium uk-form-small" type="tel">
+																						<div uk-drop="pos: right-center">
+																							<div class="uk-card uk-card-body uk-card-default">
+																								<p>Указывайте, пожалуйста,
+																									Ваш телефон <b>с кодом
+																										города и страны.</b></p>
+																								<p><i>Например: +7 777 204 2720</i></p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+												</fieldset>
+												<div class="uk-child-width-1-4"
+												     uk-grid>
+													<div></div>
+													<div>
+														<div class="uk-margin-small-left">
+															<button class="uk-button plain-gray uk-modal-close" type="button">Отмена</button>
+														</div>
+													</div>
+													<div>
+														<div class="uk-align-right uk-margin-small-right">
+															<button class=" uk-button btn_transparent" type="submit" name="button">Отправить</button>
+														</div>
+													</div>
+													<div></div>
+												</div>
+
+
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div>
-			<ul class="uk-breadcrumb">
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Item</a></li>
-			</ul>
-		</div>
-		<div class="header_bottom">
-			<div class="uk-container">
-				<div class="uk-grid">
-					<div class="uk-width-1-3">
-						<div class="uk-grid contact_info_top">
-							<div>
-								<svg aria-hidden="true" data-prefix="fas" data-icon="mobile-alt" class="svg-inline--fa fa-mobile-alt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
-								+7 (965) 77-253-77</div>
-							<div>
-								<svg aria-hidden="true" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
-								info@studyinczech.net</div>
+			<div class="header_bottom">
+				<div class="uk-container">
+					<div class="uk-grid">
+						<div class="uk-width-1-3">
+							<div class="uk-grid contact_info_top">
+								<div>
+									<svg aria-hidden="true" data-prefix="fas" data-icon="mobile-alt" class="svg-inline--fa fa-mobile-alt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
+									+7 (965) 77-253-77</div>
+								<div>
+									<svg aria-hidden="true" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+									info@studyinczech.net</div>
+							</div>
 						</div>
-					</div>
-					<div class="uk-width-2-3">
-						<div class="authorization uk-inline uk-align-right">
-							<div class="login">
-								<a href="/">
+						<div class="uk-width-2-3">
+							<div class="authorization uk-inline uk-align-right">
+								<div class="login">
+									<a href="/">
 									<svg aria-hidden="true" data-prefix="far" data-icon="sign-in" class="svg-inline--fa fa-sign-in fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 448h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zM167.1 83.5l-19.6 19.6c-4.8 4.8-4.7 12.5.2 17.1L260.8 230H12c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h248.8L147.7 391.7c-4.8 4.7-4.9 12.4-.2 17.1l19.6 19.6c4.7 4.7 12.3 4.7 17 0l164.4-164c4.7-4.7 4.7-12.3 0-17l-164.4-164c-4.7-4.6-12.3-4.6-17 .1z"></path></svg>
 									Войти</a>
-								<div uk-dropdown="pos: bottom-right; offset: 30">
-									<form class=""
-									      action="index.html"
-									      method="post">
-										<div class="form-top">
-											<div class="">
-												<input class="uk-input" type="text" name="" value="" placeholder="Логин">
+									<div uk-dropdown="pos: bottom-right; offset: 30">
+										<form class=""
+										      action="index.html"
+										      method="post">
+											<div class="form-top">
+												<div class="">
+													<input class="uk-input" type="text" name="" value="" placeholder="Логин">
 											</div>
-												<div class="password">
-													<input class="uk-input" type="password" name="" value="" placeholder="Пароль">
-													<span uk-tooltip="title: Hello World; pos: bottom">?</span>
+													<div class="password">
+														<input class="uk-input" type="password" name="" value="" placeholder="Пароль">
+														<span uk-tooltip="title: Hello World; pos: bottom">?</span>
+													</div>
+													<div>
+														<p>*для получения доступа
+															нужно заполнить анкету</p>
+													</div>
 												</div>
-												<div>
-													<p>*для получения доступа
-														нужно заполнить анкету</p>
-												</div>
-											</div>
-											<button class="uk-button" type="submit" name="button">Авторизоваться</button>
-									</form>
+												<button class="uk-button" type="submit" name="button">Авторизоваться</button>
+										</form>
 
-								</div>
-								<!-- <button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
+									</div>
+									<!-- <button class="uk-button user-button uk-align-right uk-text-capitalize" type="button">
 								Данил Яснев<span uk-icon="icon: chevron-down"></span>
 							</button>
 							<div uk-dropdown="pos: bottom-right; offset: 30">
@@ -144,153 +260,314 @@
 									</li>
 								</ul>
 							</div> -->
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</header>
-	<main class="officer-main">
-		<div class="uk-container">
-			<div class="uk-grid-small"
-			     uk-grid>
-				<aside class="sidebar-left uk-width-1-5">
-					<ul class="uk-nav">
-						<li><a class="active" href="">Проживание</a></li>
-						<li><a href="">Высшее образование</a></li>
-						<li><a href="">Проживание</a></li>
-						<li><a href="">Проживание</a></li>
-					</ul>
-					<div class="blog uk-width-5-6">
-						<p>Популярное в блоге</p>
-						<p><a href="/">Чешская кухня или самая
-						вкусная еда на земле!</a></p>
-						<p>2415 просмотров</p>
-						<p><a href="/">У нас нельзя а чешском
-						языке ЛЬЗЯ?</a></p>
-						<p>5242 просмотра</p>
-						<p><a class="marked-blog" href="/">Какая система обучения
-						в Чехии?</a></p>
-						<p>4523 просмотра</p>
-					</div>
-				</aside>
-				<div class="uk-width-3-5">
-					<div class="bcg_white">
-						<div class="uk-cover-container uk-inline bcg-for-overlay">
-							<canvas width="800" height="300"></canvas>
-							<img src="img/dormitory.jpg" alt="" uk-cover>
-							<div class="uk-position-bottom uk-overlay uk-text-center uk-padding-remove-bottom">
-								<h2>Общежитие “Young Space”</h2>
-							</div>
-							<div class="shade-on-image"></div>
+	<main>
+		<div class="uk-section-default">
+			<div class="uk-section uk-background-cover uk-position-relative"
+			     style="background-image: url(img/parallax5.jpg)">
+				<div class="uk-container uk-inline uk-position-z-index">
+					<h1 uk-parallax="y: 50; easing: 2; opacity: 1,0">ВЫСШЕЕ
+								ОБРАЗОВАНИЕ
+								В ЧЕХИИ!</h1>
+					<p uk-parallax="y: 50; easing: 1.5; opacity: 1,0">Постройте личную историю или
+						историю успеха Вашего ребенка.</p>
+				</div>
+				<div class="uk-overlay-primary uk-position-cover"></div>
+			</div>
+		</div>
+		<section class="main_offer">
+			<div class="uk-container">
+				<div class="uk-grid uk-grid-small uk-child-width-1-3@m"
+				     uk-height-match="target: > div > .uk-card">
+					<div>
+						<div class="first_cell uk-card uk-card-body uk-margin-bottom">
+							<h2 class="uk-card-title">ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
+							<p>Наши услуги</p>
 						</div>
-						<div class="image-line uk-child-width-1-5">
-							<div class="galery_img">
-								<img src="img/dormitory.jpg" alt="">
+					</div>
+					<div>
+						<div class="uk-card uk-card-default uk-grid-collapse uk-margin">
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">ПОЛУЧЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ В ЧЕХИИ
+									<img class="uk-float-right" src="img/sec_2_icon_1.png" alt="">
+								</h3>
+								<p>Комплексные программы обучения по
+									Вашим потребностям и ожиданиям.</p>
+								<button>Узнать больше
+								<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</button>
 							</div>
-								<div class="galery_img">
-									<img src="img/dormitory.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default uk-grid-collapse uk-margin">
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">онлайн курс чешского языка
+									<img class="uk-float-right" src="img/sec_2_icon_2.png" alt="">
+								</h3>
+								<p>20 часов интенсивных
+									онлайн-курсов чешского языка.</p>
+								<button>Узнать больше
+								<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</button>
 							</div>
-									<div class="galery_img">
-										<img src="img/dormitory.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default uk-grid-collapse uk-margin">
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">ПОЛУЧЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ В ЧЕХИИ
+									<img class="uk-float-right" src="img/sec_2_icon_1.png" alt="">
+								</h3>
+								<p>Комплексные программы обучения по
+									Вашим потребностям и ожиданиям.</p>
+								<button>Узнать больше
+								<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</button>
 							</div>
-										<div class="galery_img">
-											<img src="img/dormitory.jpg" alt="">
-											<a href="#">
-												<svg aria-hidden="true" data-prefix="far" data-icon="camera" class="svg-inline--fa fa-camera fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M342.7 144H464v288H48V144h121.3l24-64h125.5l23.9 64zM324.3 32h-131c-20 0-37.9 12.4-44.9 31.1L136 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48h-88l-14.3-38c-5.8-15.7-20.7-26-37.4-26zM256 408c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-192c-39.7 0-72 32.3-72 72s32.3 72 72 72 72-32.3 72-72-32.3-72-72-72z"></path></svg>
-												<br>
-												Все фотографии
-											</a>
-										</div>
-									</div>
-									<div class="text-information">
-										<h3>Общая информация</h3>
-										<p>Это современный жилой комплекс, который находится в 15 минутах ходьбы от центра г. Брно.
-											Неподалеку комплекса находиться трамвайная остановка и большой гипермаркет Алберт. Комплекс
-											прошел целый ряд реконструкций и на сегодняшний день является одним из самых новых студенческих
-											общежитий в г. Брно.</p>
-
-										<p>Здесь есть прачечная с сушкой (стоимость одной стирки составляет 60 крон), высокоскоростной
-											Интернет, летняя терраса для отдыха и гриля, рецепция, тренажёрный зал с акклиматизацией
-											(бесплатно), кофейня, кофейные автоматы, специализированные залы, куда Вы можете позвать своих
-											друзей, чтобы отметить свой День рожденья или провести вечеринку, в здании работает камерная
-											система безопасности, предназначенная для обеспечения порядка и безопасности для жителей
-											комплекса. Проживание возможно в одноместных, двухместных, трехместных номерах, а также
-											отдельных апартаментах — квартирах-студиях.</p>
-
-										<p>Общежитие разделено на несколько блоков. Двухкомнатные блоки соединены общим коридором, имеют
-											общую на две комнаты ванную и туалет. Таким образом, один блок рассчитан на двух или четверых
-											человек, в каждой комнате проживает по 1 или 2 человека. Кухня общая на 3-4 блока. Комнаты
-											полностью меблированы (есть рабочий стол с лампой, стул, кровать, шкаф, комод, есть также подушка с
-											одеялом и постельное белье, которое можно менять раз в 2 недели абсолютно бесплатно).</p>
-
-										<p>Уборку в комнатах проводят сами студены, при необходимости на рецепции можно взять пылесос,
-											швабру, веник исовок. Можно также за отделанную плату воспользоваться услугами уборщицы.</p>
-
-										<p>Студенческий комплекс «Young Space» расположен на улице Цейл (Сejl 97), что, пожалуй, и является
-											его главным минусом, так как в данном районе проживает немаленькое количество как чехов, так ромов
-											или как мы их привыкли называть «цыган». Этот факт пугает довольно многих, однако, стоит иметь в
-											виду, что это не те «цыгане», которых мы привыкли видеть дома, эти люди живут здесь уже долгое
-											время, ходят на работу и не представляют для Вас угрозы. Однако, если этот аспект Вас все-таки
-											смущает, то существует еще множество других общежитий, заслуживающих Вашего внимания.</p>
-										<h3 class="uk-margin-remove">Стоимость</h3>
-										<ul class="list uk-margin-remove">
-											<li>
-												<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
-												<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
-											</li>
-											<li>
-												<b>3 300 крон</b> или <b>122 €</b> за место в трехместном номере
-												<span class="uk-display-block"><i>+ однократный возвратный залог 3 300 крон или 122 €</i></span>
-											</li>
-										</ul>
-
-									</div>
-									<div class="uk-text-right bottom-border-top">
-										<p>
-											<a href="#">Задать вопрос</a> или
-											<button class="button accent_button" type="button" name="button">Заполнить анкету</button>
-										</p>
-									</div>
-								</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default uk-grid-collapse uk-margin">
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">ПОЛУЧЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ В ЧЕХИИ
+									<img class="uk-float-right" src="img/sec_2_icon_1.png" alt="">
+								</h3>
+								<p>Комплексные программы обучения по
+									Вашим потребностям и ожиданиям.</p>
+								<button>Узнать больше
+								<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</button>
 							</div>
-							<div class="back-link uk-width-1-5">
-								<a href="">
-								<span uk-icon="icon: chevron-left"></span>
-								<span>Назад</span>
-							</a>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default uk-grid-collapse uk-margin">
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">ПОЛУЧЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ В ЧЕХИИ
+									<img class="uk-float-right" src="img/sec_2_icon_1.png" alt="">
+								</h3>
+								<p>Комплексные программы обучения по
+									Вашим потребностям и ожиданиям.</p>
+								<button>Узнать больше
+								<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-	</main>
+			</div>
+		</section>
+		<section class="main_plan">
+			<div class="vl"></div>
+			<div class="uk-container">
 
+				<h2>КАК ВСЕ БУДЕТ
+			<span>ПРОИСХОДИТЬ?</span></h2>
+				<div class="plan_row plan_left">
+					<div class="plan_circle">1</div>
+					<div class="plan_block">
+
+						<h3>ВЫБОР ПРОГРАММЫ</h3>
+						<p>Вам необходимо выбрать программу, которая
+							будет отвечать Вашим требованиям и
+							финансовым возможностям. Затем, Вы подаете
+							заявку и заполняете анкету, выбрав одну из
+							наших программ.</p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<div class="plan_row plan_right">
+					<div class="plan_circle">2</div>
+					<div class="plan_block">
+
+						<h3>ПОДПИСАНИЕ ДОГОВОРА</h3>
+						<p>После того, как Вы отправили нам заявку
+							с выбранной образовательной программой с
+							Вами связывается наш сотрудник, который
+							расскажет о дальнейших совместных
+							действиях и отправит Вам договор для подписания.</p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<div class="plan_row plan_left">
+					<div class="plan_circle">3</div>
+					<div class="plan_block">
+
+						<h3>ОФОРМЛЕНИЕ ВИЗЫ</h3>
+						<p>Далее мы собираем Вам все необходимые
+							документы для получения визы, записываем
+							Вас на языковые курсы и бронируем место в
+							общежитии. Так же мы высылаем Вам пакет
+							документов и начинаем подготовку к
+							собеседованию в чешском посольстве.</p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<div class="plan_row plan_right">
+					<div class="plan_circle">4</div>
+					<div class="plan_block">
+
+						<h3>ПРИЕЗД В ЧЕХИЮ</h3>
+						<p>По приезду в Чехию Вас встречает наш сотрудник,
+							который организует Вам трансфер в место
+							пребывания. По приезду мы расселяем участников
+							наших программ по выбранным общежитиям и
+							квартирам. </p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<div class="plan_row plan_left">
+					<div class="plan_circle">5</div>
+					<div class="plan_block">
+
+						<h3>ОБУЧЕНИЕ НА КУРСАХ</h3>
+						<p>Далее мы собираем Вам все необходимые
+							документы для получения визы, записываем
+							Вас на языковые курсы и бронируем место в
+							общежитии. Так же мы высылаем Вам пакет
+							документов и начинаем подготовку к
+							собеседованию в чешском посольстве.</p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<div class="plan_row plan_right">
+					<div class="plan_circle">6</div>
+					<div class="plan_block">
+
+						<h3>ПОСТУПЛЕНИЕ В ВУЗ</h3>
+						<p>После прохождения процедуры нострификации,
+							наши специалисты по образованию предоставят
+							Вам всю необходимую информацию о процедуре
+							поступления на выбранную Вами специальность,
+							посоветуют ВУЗы, помогут заполнить заявления
+							и отправить все необходимые для поступления
+							документы.</p>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				<button class="button"><a href="/">Заполнить анкету</a></button>
+			</div>
+		</section>
+
+		<section class="mediateka">
+			<div class="uk-container">
+				<h2>НАША
+			<span>МЕДИАТЕКА</span>
+			</h2>
+				<div class="uk-grid uk-grid-medium">
+					<div class="uk-width-1-2"><button class="uk-align-right media_button">Фото</button></div>
+					<div class="uk-width-1-2"><button class="media_button">Видео</button></div>
+				</div>
+				<div class="uk-grid uk-grid-medium">
+					<div class="uk-width-1-4 ">
+						<a class="media_wrap uk-transition-toggle uk-inline-clip" href="/">
+						<img class="media_image uk-transition-scale-up uk-transition-opaque" src="img/1.jpg" alt="">
+						<div class="shade-on-image"></div>
+						<span>Наши студенты
+						рассказывают об обучении
+						в Чехии</span>
+						</a>
+					</div>
+					<div class="uk-width-1-4">
+						<a class="media_wrap uk-transition-toggle uk-inline-clip" href="/">
+						<img class="media_image uk-transition-scale-up uk-transition-opaque" src="img/2.jpg" alt="">
+						<div class="shade-on-image"></div>
+						<span>Какая система
+						образования в Чехии?</span></a>
+					</div>
+					<div class="uk-width-1-4">
+						<a class="media_wrap uk-transition-toggle uk-inline-clip" href="/">
+						<img class="media_image uk-transition-scale-up uk-transition-opaque" src="img/3.jpg" alt="">
+						<div class="shade-on-image"></div>
+						<span>Отзывы наших учеников
+						о нашей работе</span>
+					</a>
+					</div>
+					<div class="uk-width-1-4">
+						<a href="/"><img class="media_image" src="img/prague.jpg" alt=""></a>
+					</div>
+				</div>
+		</section>
+		<section class="question">
+			<div class="uk-container">
+				<h2>Хотите задать вопрос?</h2>
+				<div class="uk-grid uk-grid-large">
+					<div class="uk-width-1-2">
+						<form class="uk-align-right question_left"
+						      action="">
+							<span>Ваше имя</span><br>
+							<input type="text" name="name" value=""><br>
+							<span>Телефон</span><br>
+							<input type="text" name="mobile" value=""><br>
+							<button class="button accent_button" type="submit" name="call">Заказать звонок</button>
+						</form>
+					</div>
+					<div class="uk-width-1-2">
+						<div class="question_right">
+							<p>Заполните форму заявки и мы перезвоним
+								вам ближайшие 10 минут.</p>
+							<p>Если вы стесняетесь или же по любой
+								другой причине не можете разговаривать —
+								<a href="">напишите нам на почту</a> или в <a href="">Skype</a>.</p>
+							<p>Примечание
+								<svg class="svg" aria-hidden="true" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+							</p>
+
+							<p>Ваши данные в полной безопасности.
+								Мы не передаем их третьим лицам.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="map">
+			<div class="google-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.089732574224!2d16.553917665372133!3d49.180379537378236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471295d90cc34d99%3A0x7e587a10910e95f0!2sHOTEL+-+FOR+DOGS%2C+CATS+AND+OTHER+ANIMALS!5e0!3m2!1sen!2scz!4v1536852182879" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</main>
 	<footer>
 		<div class="footer-top">
 			<div class="uk-container">
 				<div class="uk-grid uk-child-width-1-4">
 					<div>
-						<a class="logo-footer" href="/">
-            <img src="img/logo.png" alt="">
-          </a>
-						<p>Мы в соцсетях:</p>
+						<div>
+							<a class="logo-footer" href="/">
+		            	<img src="img/logo.png" alt="">
+		          	</a>
+						</div>
+
 						<div class="socials">
+							<p>Мы в соцсетях:</p>
 							<a href="">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
-							</a>
+									<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+								</a>
 							<a href="">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
-							</a>
+									<svg aria-hidden="true" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+								</a>
 							<a href="">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="odnoklassniki" class="svg-inline--fa fa-odnoklassniki fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M275.1 334c-27.4 17.4-65.1 24.3-90 26.9l20.9 20.6 76.3 76.3c27.9 28.6-17.5 73.3-45.7 45.7-19.1-19.4-47.1-47.4-76.3-76.6L84 503.4c-28.2 27.5-73.6-17.6-45.4-45.7 19.4-19.4 47.1-47.4 76.3-76.3l20.6-20.6c-24.6-2.6-62.9-9.1-90.6-26.9-32.6-21-46.9-33.3-34.3-59 7.4-14.6 27.7-26.9 54.6-5.7 0 0 36.3 28.9 94.9 28.9s94.9-28.9 94.9-28.9c26.9-21.1 47.1-8.9 54.6 5.7 12.4 25.7-1.9 38-34.5 59.1zM30.3 129.7C30.3 58 88.6 0 160 0s129.7 58 129.7 129.7c0 71.4-58.3 129.4-129.7 129.4s-129.7-58-129.7-129.4zm66 0c0 35.1 28.6 63.7 63.7 63.7s63.7-28.6 63.7-63.7c0-35.4-28.6-64-63.7-64s-63.7 28.6-63.7 64z"></path></svg>
-							</a>
+									<svg aria-hidden="true" data-prefix="fab" data-icon="odnoklassniki" class="svg-inline--fa fa-odnoklassniki fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M275.1 334c-27.4 17.4-65.1 24.3-90 26.9l20.9 20.6 76.3 76.3c27.9 28.6-17.5 73.3-45.7 45.7-19.1-19.4-47.1-47.4-76.3-76.6L84 503.4c-28.2 27.5-73.6-17.6-45.4-45.7 19.4-19.4 47.1-47.4 76.3-76.3l20.6-20.6c-24.6-2.6-62.9-9.1-90.6-26.9-32.6-21-46.9-33.3-34.3-59 7.4-14.6 27.7-26.9 54.6-5.7 0 0 36.3 28.9 94.9 28.9s94.9-28.9 94.9-28.9c26.9-21.1 47.1-8.9 54.6 5.7 12.4 25.7-1.9 38-34.5 59.1zM30.3 129.7C30.3 58 88.6 0 160 0s129.7 58 129.7 129.7c0 71.4-58.3 129.4-129.7 129.4s-129.7-58-129.7-129.4zm66 0c0 35.1 28.6 63.7 63.7 63.7s63.7-28.6 63.7-63.7c0-35.4-28.6-64-63.7-64s-63.7 28.6-63.7 64z"></path></svg>
+								</a>
 							<a href="">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-							</a>
+									<svg aria-hidden="true" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+								</a>
 							<a href="">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-							</a>
+									<svg aria-hidden="true" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+								</a>
 						</div>
 					</div>
 					<div>
@@ -324,18 +601,20 @@
 			<div class="uk-container">
 				<div class="uk-grid">
 					<div class="uk-width-1-2">
-						<p>© 2016 Все права защищены. Сайт сделан в студии <a><img src="img/autor_logo.png" alt=""></a></p>
+						<p>© 2016 Все права защищены. <span>Сайт сделан в студии</span> <a><img src="img/autor_logo.png" alt=""></a></p>
 					</div>
 					<div class="uk-width-1-2">
 						<div class="uk-align-right">
 							<img class="uk-margin-left" src="img/visa.png" alt="">
 							<img class="uk-margin-left" src="img/maestro.png" alt="">
 							<img class="uk-margin-left" src="img/mastercard.png" alt="">
-						</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 	</footer>
+
+
 	<script src="/js/scripts.min.js"></script>
 </body>
